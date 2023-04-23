@@ -59,7 +59,7 @@ Next, the number of different permutations of the numbers is $n!$, and the numbe
 This is exactly how we are going to solve it. Each time we apply an operator on two of the numbers, record the new value (because we don't have to use all of the numbers, an intermediate result could be the solution. This is another difference between this problem and the 24 puzzle game) and its corresponding expression, then we take the new value and the rest of the numbers as the input to the same problem, but the number of the numbers is one less, so we can solve it recursively. If the solver finds the exact solution, we can return early. But if there's no exact solution, it returns the closest possible solution.
 </p>
 <p>
-We can easily modify the function to return the first $k$ closest solutions, e.g. with a priority queue, but there will be many duplicated expressions with the same solution value. We can use a set to skip the expressions that give the save value that we've already found.
+We can easily modify the function to return the first $k$ closest solutions, e.g. with a priority queue, but there will be many duplicated expressions with the same solution value. We can use a set to skip the expressions that give the save value that we've already found. Implementations are simple, so they're left as exercises! :)
 </p>
 </body>
 
