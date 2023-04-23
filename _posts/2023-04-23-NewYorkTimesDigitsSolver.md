@@ -61,6 +61,46 @@ This is exactly how we are going to solve it. Each time we apply an operator on 
 <p>
 We can easily modify the function to return the first $k$ closest solutions, e.g. with a priority queue, but there will be many duplicated expressions with the same solution value. We can use a set to skip the expressions that give the same value that we've already found. Implementations are simple, so they're left as exercises! :)
 </p>
+<h2>
+An Example of Bad Code
+</h2>
+<p>
+I took a look at their JS code for puzzle generation, and I found this function:
+</p>
+<pre>
+function getSmartOperation(firstNum, secondNum) {
+  var randInt = getRandomInt(0, 100)
+  const quotient = firstNum / secondNum
+  if (randInt < 20 && firstNum + secondNum <= 999) {
+    // 20% chance of +
+    return '+'
+  } else if (
+    randInt >= 21 &&
+    randInt < 40 &&
+    firstNum - secondNum >= 0
+  ) {
+    // 20% chance of -
+    return 'âˆ’'
+  } else if (
+    randInt >= 41 &&
+    randInt < 65 &&
+    firstNum * secondNum <= 999
+  ) {
+    // 25% chance of x
+    return 'Ã—'
+  } else if (randInt >= 65 && Number.isInteger(quotient)) {
+    // 35% chance of Ã·
+    return 'Ã·'
+  } else {
+    return getSmartOperation(firstNum, secondNum)
+  }
+}
+</pre>
+<p>
+This is part of their algorithm to generate the target number from a randomly generated numbers' list. The problem with this function is in the last statement. If all the attempts to find an appropriate operator for the two numbers fail, it puts the same two numbers back into the function and repeats the process. Since  the numbers are randomly generated, there's 50% chance that the first number is less than the second number, so when they are put back, if the RNG rolls to $-$ or $/$ again, it would just be a waste of time and we just roll the RNG again until it ends up being $+$ or $*$. The worse thing is, if the first number is smaller than the second number, and their summation and product are both larger than 999, the recursion will never end.
+</p>
+<p>
+A better approach is, exchange the two numbers if the first is less than the second, then attemp to assign the division operator with high probability. If they are not divisible, try multiplying and adding with their assigned probabilities. If both fail, just assign the $-$ operator, because the first number is larger or equal to the second number and the difference must be less or equal to the first number, it's guaranteed that the result is a valid number.</p>
 </body>
 
 <script>
@@ -132,26 +172,14 @@ function solve(nums, tar) {
             n: nums[j].n / nums[i].n,
             exp: '(' + nums[j].exp + '/' + nums[i].exp + ')'
           }
-          if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-            sol = num_n
-            if (num_n.n == tar) {
-              exact = true
-              return
-            }
-          }
+          if(check_update(num_n)) return
           solve([...nums_new, num_n], tar)
         }
         num_n = {
           n: nums[j].n - nums[i].n,
           exp: '(' + nums[j].exp + '-' + nums[i].exp + ')'
         }
-        if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-          sol = num_n
-          if (num_n.n == tar) {
-            exact = true
-            return
-          }
-        }
+        if(check_update(num_n)) return
         solve([...nums_new, num_n], tar)
       } else if (nums[i].n > nums[j].n) {
         if (nums[i].n % nums[j].n == 0) {
@@ -159,56 +187,41 @@ function solve(nums, tar) {
             n: nums[i].n / nums[j].n,
             exp: '(' + nums[i].exp + '/' + nums[j].exp + ')'
           }
-          if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-            sol = num_n
-            if (num_n.n == tar) {
-              exact = true
-              return
-            }
-          }
+          if(check_update(num_n)) return
           solve([...nums_new, num_n], tar)
         }
         num_n = {
           n: nums[i].n - nums[j].n,
           exp: '(' + nums[i].exp + '-' + nums[j].exp + ')'
         }
-        if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-          sol = num_n
-          if (num_n.n == tar) {
-            exact = true
-            return
-          }
-        }
+        if(check_update(num_n)) return
         solve([...nums_new, num_n], tar)
       }
       num_n = {
         n: nums[i].n + nums[j].n,
         exp: '(' + nums[i].exp + '+' + nums[j].exp + ')'
       }
-      if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-        sol = num_n
-        if (num_n.n == tar) {
-          exact = true
-          return
-        }
-      }
+      if(check_update(num_n)) return
       solve([...nums_new, num_n], tar)
       num_n = {
         n: nums[i].n * nums[j].n,
         exp: '(' + nums[i].exp + '*' + nums[j].exp + ')'
       }
-      if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
-        sol = num_n
-        if (num_n.n == tar) {
-          exact = true
-          return
-        }
-      }
+      if(check_update(num_n)) return
       solve([...nums_new, num_n], tar)
     }
   }
 }
-
+function check_update(num_n){
+  if (Math.abs(num_n.n - tar) < Math.abs(sol.n - tar)) {
+    sol = num_n
+    if (num_n.n == tar) {
+      exact = true
+      return true
+    }
+  }
+  return false
+}
 function display() {
   document.getElementById('solution').innerText = sol.n + '=' + sol.exp
 }
