@@ -145,5 +145,4 @@ function solve(nums, tar) {
 
 function display() {
   document.getElementById('solution').innerText = sol.n + '=' + sol.exp
-  console.log(sol)
 }
