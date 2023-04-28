@@ -71,26 +71,26 @@ On another note, I noticed that this function is an exact copy of <a href="https
 <p>
 Anyway, here's my implementation of this algorithm in C++:</p>
 <pre>
-#include<time.h>
-#include<vector>
-#include<unordered_map>
-#include<random>
+#include&lt;time.h>
+#include&lt;vector>
+#include&lt;unordered_map>
+#include&lt;random>
 
 using std::vector;
 using std::unordered_map;
-template <typename T>
-vector<T> ranSub(const vector<T>& arr,int n,bool trunc=false){
-    if(arr.size()<n){
+template &lt;typename T>
+vector&lt;T> ranSub(const vector&lt;T>& arr,int n,bool trunc=false){
+    if(arr.size()&lt;n){
         if(trunc) n=arr.size();
         else throw;
     }
     int len=arr.size();
-    vector<T> res(n);
-    unordered_map<int,int> taken;
+    vector&lt;T> res(n);
+    unordered_map&lt;int,int> taken;
     taken.reserve(n);
     std::default_random_engine generator(time(NULL));
     while(n--){
-        std::uniform_int_distribution<int> distribution(0,len-1);
+        std::uniform_int_distribution&lt;int> distribution(0,len-1);
         int x=distribution(generator);
         res[n]=arr[taken.find(x)!=taken.end()?taken[x]:x];
         taken[x]=taken.find(--len)!=taken.end()?taken[len]:len;
