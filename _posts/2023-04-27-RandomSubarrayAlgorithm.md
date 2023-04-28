@@ -67,31 +67,31 @@ function getRandomInArray(arr, n) {
 <p>
 But the first function has a few advantages in certain circumstances. One issue with it is, if we are not allowed to modify the original array, we must make a copy of the entire array. Even if we are allowed to modify it, exchanging two elements may still consume a lot of resources if the elements are large objects. One way to solve this is, we can just record the indices that are exchanged instead of the elements, and construct the new array based on the indices in the end. It avoids the copying issue, but if the array is very large and we only need a few elements, creating an integer array of the full length and initialize it may still be time consuming. That's probably why the function in the beginning uses this "in" operator - so it kind of serves as a map of int to int. I'm not sure about the overhead of a "new Array" in JS, I wonder if it would be more efficient with an actual map?</p>
 <p>
-On another note, I noticed that this function is an exact copy of <a href="https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array">this answer</a>. I wonder if it's by the same author... or someone just googled it and copied this. XD</p>
+On another note, I noticed that this function is an exact copy of <a href="https://stackoverflow.com/a/19270021/2692551">this answer</a>. I wonder if it's by the same author... or someone just googled it and copied this. XD</p>
 <p>
 Anyway, here's my implementation of this algorithm in C++:</p>
 <pre>
-#include&lt;time.h>
-#include&lt;vector>
-#include&lt;unordered_map>
-#include&lt;random>
+#include<time.h>
+#include<vector>
+#include<unordered_map>
+#include<random>
 
 using std::vector;
 using std::unordered_map;
 template &lt;typename T>
-vector&lt;T> ranSub(const vector&lt;T>& arr,int n,bool trunc=false){
-    if(arr.size()&lt;n){
+vector<T> ranSub(const vector<T>& arr,size_t n,bool trunc=false){
+    if(arr.size()<n){
         if(trunc) n=arr.size();
         else throw;
     }
-    int len=arr.size();
-    vector&lt;T> res(n);
-    unordered_map&lt;int,int> taken;
+    size_t len=arr.size();
+    vector<T> res(n);
+    unordered_map<size_t,size_t> taken;
     taken.reserve(n);
     std::default_random_engine generator(time(NULL));
     while(n--){
-        std::uniform_int_distribution&lt;int> distribution(0,len-1);
-        int x=distribution(generator);
+        std::uniform_int_distribution<size_t> distribution(0,len-1);
+        size_t x=distribution(generator);
         res[n]=arr[taken.find(x)!=taken.end()?taken[x]:x];
         taken[x]=taken.find(--len)!=taken.end()?taken[len]:len;
     }
