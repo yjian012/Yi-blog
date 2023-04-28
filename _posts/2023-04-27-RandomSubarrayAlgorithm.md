@@ -45,7 +45,7 @@ function getRandomInArray(arr, n) {
 <p>
 Apparently the function takes an array and returns a length-$n$ random subarray of the argument. But I was confused because it uses a grammar that I was not familiar with - I thought the "in" operator here is similar to the "in" in Python, which misled me at first. I realized that that's definitely not what it does when I tested it, indeed, it returns if the property (in this case, the index) exists, not the value.</p>
 <p>
-I wonder why it's written this way, instead of the more straightforward Fisher¨CYates shuffle algorithm, because I noticed that this algorithm gives exactly the same result with the Fisher¨CYates algorithm. I thought about this problem a few years ago in my research. After a few attempts, I re-discovered this algorithm myself. I was quite happy about it, but at the same time I thought that this must have already been discovered long ago. Years later, I finally searched about it and learned its official name. The original Fisher¨CYates shuffle algorithm may be implemented this way:</p>
+I wonder why it's written this way, instead of the more straightforward Fisherâ€“Yates shuffle algorithm, because I noticed that this algorithm gives exactly the same result with the Fisherâ€“Yates algorithm. I thought about this problem a few years ago in my research. After a few attempts, I re-discovered this algorithm myself. I was quite happy about it, but at the same time I thought that this must have already been discovered long ago. Years later, I finally searched about it and learned its official name. The original Fisherâ€“Yates shuffle algorithm may be implemented this way:</p>
 
 <pre>
 function getRandomInArray(arr, n) {
