@@ -96,7 +96,7 @@ vector&lt;T> ranSub(const vector&lt;T>& arr,size_t n,bool trunc=false){
         taken[x]=taken.find(--len)!=taken.end()?taken[len]:len;
     }
     return res;
-    }
+}
 </pre>
 
 </body>
