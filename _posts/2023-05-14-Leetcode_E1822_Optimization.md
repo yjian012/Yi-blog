@@ -65,7 +65,7 @@ int arraySign(int nums[],int len){
 }
 ```
 
-```code2 []
+```code2
 int arraySign(int nums[],int len){
   int r=1;
   for(int i=0;i&lt;len;++i){
@@ -78,7 +78,7 @@ int arraySign(int nums[],int len){
 
 without optimization:
 
-```code1 []
+```code1
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -129,7 +129,7 @@ without optimization:
 	ret
 	.cfi_endproc
 ```
-```code2 []
+```code2
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -179,7 +179,7 @@ without optimization:
 
 with -O1 (same result as -O):
 
-```code1 []
+```code1
 	.cfi_startproc
 	endbr64
 	testl	%esi, %esi
@@ -207,7 +207,7 @@ with -O1 (same result as -O):
 	jmp	.L1
 	.cfi_endproc
 ```
-```code2 []
+```code2
 	.cfi_startproc
 	endbr64
 	testl	%esi, %esi
@@ -239,7 +239,7 @@ with -O1 (same result as -O):
 
 with -Ofast (same result as -O2 and -O3):
 
-```code1 []
+```code1
 	.cfi_startproc
 	endbr64
 	testl	%esi, %esi
@@ -272,7 +272,7 @@ with -Ofast (same result as -O2 and -O3):
 	ret
 	.cfi_endproc
 ```
-```code2 []
+```code2
 	.cfi_startproc
 	endbr64
 	testl	%esi, %esi
