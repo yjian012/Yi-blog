@@ -54,7 +54,7 @@ public:
 edit:
 So I took a look at the assembly code that the following two codes generate,
 
-```code1 []
+```code1
 int arraySign(int nums[],int len){
   int r=1;
   for(int i=0;i&lt;len;++i){
