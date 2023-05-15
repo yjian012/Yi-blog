@@ -2,25 +2,7 @@
 title: Leetcode E1822 Optimization
 date: 2023-05-14
 ---
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$','$'],['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
-    processEscapes: true,      
-    processEnvironments: true, 
-    processRefs: true       
-  },
-  options: {
-   ignoreHtmlClass: 'tex2jax_ignore|editor-rich-text'
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
-
+<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
 I think I'll stop posting solutions on leetcode discussion because everyone just posts the same stuff there and anything novel doesn't seem to be recognized, so I'll just post them here instead. Starting from E1822. Sign of the Product of an Array.
 <pre>
 Description:

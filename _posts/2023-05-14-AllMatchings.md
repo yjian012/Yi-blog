@@ -4,24 +4,7 @@ date: 2023-05-14
 ---
 <html>
 <title></title>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$','$'],['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
-    processEscapes: true,      
-    processEnvironments: true, 
-    processRefs: true       
-  },
-  options: {
-   ignoreHtmlClass: 'tex2jax_ignore|editor-rich-text'
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
+<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
 <body>
 <p>
 I thought this function was helpful for solving another problem. It did work, but it was unnecessary since there were faster algorithms to solve it. But I was interested, so I ended up finishing it.

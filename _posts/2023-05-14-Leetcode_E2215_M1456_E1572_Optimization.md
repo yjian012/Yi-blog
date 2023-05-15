@@ -2,23 +2,7 @@
 title: Leetcode E2215 M1456 E1572 Optimization
 date: 2023-05-14
 ---
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$','$'],['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
-    processEscapes: true,      
-    processEnvironments: true, 
-    processRefs: true       
-  },
-  options: {
-   ignoreHtmlClass: 'tex2jax_ignore|editor-rich-text'
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
 <pre>
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
