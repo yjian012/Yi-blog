@@ -37,7 +37,7 @@ It's very easy. But can you find the most optimized way to solve it? Comparing w
 ```
 class Solution {
 public:
-    int arraySign(vector&lt;int>& nums) {
+    int arraySign(vector<int>& nums) {
         int r=0;
         for(int i : nums){
             if(i==0) return 0;
@@ -56,7 +56,7 @@ So I took a look at the assembly code that the following two codes generate,
 ```code1
 int arraySign(int nums[],int len){
   int r=1;
-  for(int i=0;i&lt;len;++i){
+  for(int i=0;i<len;++i){
     if(nums[i]==0) return 0;
     r^=nums[i];
   }
@@ -67,9 +67,9 @@ int arraySign(int nums[],int len){
 ```code2
 int arraySign(int nums[],int len){
   int r=1;
-  for(int i=0;i&lt;len;++i){
+  for(int i=0;i<len;++i){
     if(nums[i]==0) return 0;
-    if(nums[i]&lt;0) r=-r;
+    if(nums[i]<0) r=-r;
   }
   return r;
 }
