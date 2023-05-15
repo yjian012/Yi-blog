@@ -23,9 +23,10 @@ MathJax = {
 </script>
 
 <body>
-
+<p>
 I think I'll stop posting solutions on leetcode discussion because everyone just posts the same stuff there and anything novel doesn't seem to be recognized, so I'll just post them here instead. Starting from E1822. Sign of the Product of an Array.
-
+</p>
+<pre>
 Description:
 There is a function signFunc(x) that returns:
 1 if x is positive.
@@ -33,9 +34,11 @@ There is a function signFunc(x) that returns:
 0 if x is equal to 0.
 You are given an integer array nums. Let product be the product of all values in the array nums.
 Return signFunc(product).
-
+</pre>
+<p>
 It's very easy. But can you find the most optimized way to solve it? Comparing with normal approach, a simple modification may speed up your code 70% to 100%.
-
+</p>
+<pre>
 # Code
 ```
 class Solution {
@@ -302,8 +305,11 @@ with -Ofast (same result as -O2 and -O3):
 	ret
 	.cfi_endproc
 ```
+</pre>
+<p>
 So, indeed code 1 has fewer operations inside the loop, with or without optimization... With optimization, it has 7/10 of the number of operations of code 2 inside the loop, it seems?
-
+</p>
+<pre>
 ---
 
 So I did some benchmark too,
@@ -313,10 +319,11 @@ So I did some benchmark too,
 It indeed saves about 30% to 50% time.
 
 ---
-
-Further optimization?
+</pre>
+<p>
+Further optimization?<br/>
 If the 64bit operation is as fast as 32bit operation and "int" is 32bit, it may seem that using e.g. uint_fast64_t would further halve the time because we can do two "xor"s at the same time. But in this case, it doesn't help much because checking 0 would be much more complicated. You would have to define two more constants to check if the first half of the 64 bit int is all 0, then the second half. So it probably doesn't work.
 I think the code above is pretty much optimized for this problem.
-
+</p>
 </body>
 </html>
