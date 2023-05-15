@@ -25,6 +25,7 @@ MathJax = {
 <body>
 <p>
 I thought this function was helpful for solving another problem. It did work, but it was unnecessary since there were faster algorithms to solve it. But I was interested, so I ended up finishing it.
+The algorithm iterates through all possible ways to match $2n$ points, i.e. <a href="https://en.wikipedia.org/wiki/Chord_diagram_(mathematics)">chord diagrams</a>. 
 </p>
 <p>
 Input constraints: $v.size()$ is even, elements are distinct and comparable, $v[2i]&lt;v[2i+1]$.<br/>
@@ -101,7 +102,6 @@ output:
 (0,5)(1,4)(2,3)
 </pre>
 <p>
-The algorithm iterates through all possible ways to match $2n$ points, i.e. <a href="https://en.wikipedia.org/wiki/Chord_diagram_(mathematics)">chord diagrams</a>. 
 The only other place that mentions the same problem is <a href="https://stackoverflow.com/questions/23689569/enumerate-perfect-matchings-of-a-complete-graph">here, solved with a recursive algorithm</a>. But the iterative is more efficient. Benchmarking shows that the recursive solution is 20 times slower for input size $2n=8$, and 30 times slower for input size $2n=10$.</p>
 <img src="https://i.postimg.cc/rFDTXtRj/next-matching.png" alt="Benchmarking result">
 <p>Not sure what the applications might be, but I'll just share it here.</p>
