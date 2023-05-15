@@ -19,7 +19,7 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-
+<pre>
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
     answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
@@ -28,7 +28,7 @@ Note that the integers in the lists may be returned in any order.
 Constraints:
 1 &lt;= nums1.length, nums2.length &lt;= 1000
 -1000 &lt;= nums1[i], nums2[i] &lt;= 1000
-
+</pre>
 Almost all the solutions uses two tables, but actually one table is enough.
 
 # Code
@@ -58,11 +58,12 @@ public:
     }
 };
 ```
+<pre>
 Runtime 7 ms Beats 100%
 Memory 26.7 MB Beats 94.43%
-
+</pre>
 ---
-
+<pre>
 M1456 description:
 Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
 Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
@@ -70,7 +71,7 @@ Constraints:
 1 &lt;= s.length &lt;= 105
 s consists of lowercase English letters.
 1 &lt;= k &lt;= s.length
-
+</pre>
 Another very easy problem. But is your solution optimized?
 The following method may be 10 times faster:
 
@@ -98,16 +99,17 @@ public:
     }
 };
 ```
+
 1 operation instead of (mostly and at most) 5, so I was expecting a 5x speedup. But somehow it's almost 10 times faster?
 ![M1456. benchmark.PNG](https://assets.leetcode.com/users/images/9f69c641-cc30-481e-bb9d-ff393965fa63_1683253659.5501282.png)
 
 ---
-
+<pre>
 E1572 description:
 Given a square matrix mat, return the sum of the matrix diagonals.
 
 Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
-
+</pre>
 Also very easy. But instead of checking if we are at the center every time, we can just check it once at the end. Also we can do it in one iterations instead of 2.
 ```
 class Solution {

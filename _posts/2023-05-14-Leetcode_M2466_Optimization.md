@@ -19,7 +19,7 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-
+<pre>
 M2466 description:
 Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:
     Append the character '0' zero times.
@@ -30,7 +30,7 @@ Return the number of different good strings that can be constructed satisfying t
 Constraints:
 1 &lt;= low &lt;= high &lt;= 105
 1 &lt;= zero, one &lt;= low
-
+</pre>
 An optimization to the typical solution is, noticing that if gcd(zero,one) is not one, we can skip a lot of unnecessary computations.
 (And different combinations of ("zero","one")s may conform to the same entry in the table.)
 We can save what we've calculated for future inputs.
@@ -93,7 +93,7 @@ public:
 ```
 In this case we may change it to
 ```
-unordered_map&lt;long long,vector<int>> lookUp;
+unordered_map&lt;long long,vector&lt;int>> lookUp;
 long long st=(long long)s*100000+l;
 ```
 which may be faster than converting to a string? I'm just too lazy to write a hash for pair<int,int> ...

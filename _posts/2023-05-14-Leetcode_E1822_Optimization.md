@@ -22,15 +22,15 @@ MathJax = {
 
 
 I think I'll stop posting solutions on leetcode discussion because everyone just posts the same stuff there and anything novel doesn't seem to be recognized, so I'll just post them here instead. Starting from E1822. Sign of the Product of an Array.
-
+<pre>
 Description:
 There is a function signFunc(x) that returns:
-1 if x is positive.
--1 if x is negative.
-0 if x is equal to 0.
+    1 if x is positive.
+    -1 if x is negative.
+    0 if x is equal to 0.
 You are given an integer array nums. Let product be the product of all values in the array nums.
 Return signFunc(product).
-
+</pre>
 It's very easy. But can you find the most optimized way to solve it? Comparing with normal approach, a simple modification may speed up your code 70% to 100%.
 
 # Code
@@ -49,7 +49,6 @@ public:
 ```
 
 ---
-
 
 edit:
 So I took a look at the assembly code that the following two codes generate,
