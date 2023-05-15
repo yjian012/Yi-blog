@@ -28,7 +28,7 @@ Solver
 <p>
 Target is <textarea id="target"></textarea><span id='mess1'></span></p>
 <p>
-Numbers are (seperate by space) <textarea id="nums"></textarea> <span id='mess2'></span>
+Numbers are (seperate by space) <textarea id="nums" onfocus="hideEle('warn')"></textarea> <span id='mess2'></span>
 <span id='warn' style='display:None'>(There are more than 6 numbers, it may take much longer. Proceed anyway? <button id='proceed' onclick="compute()">Yes</button>)</span>
 </p>
 <p>
@@ -225,5 +225,6 @@ function check_update(num_n){
 function display() {
   document.getElementById('solution').innerText = sol.n + '=' + sol.exp
 }
+function hideEle(ele){document.getElementById(ele).style.display='None'}
 </script>
 </html>

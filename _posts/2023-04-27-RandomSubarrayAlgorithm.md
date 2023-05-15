@@ -75,6 +75,9 @@ Anyway, here's my implementation of this algorithm in C++:</p>
 #include&lt;vector&gt;
 #include&lt;unordered_map&gt;
 #include&lt;random&gt;
+#include&lt;chrono&gt;
+
+std::default_random_engine generator(chrono::system_clock::now().time_since_epoch().count());
 
 using std::vector;
 using std::unordered_map;
@@ -88,7 +91,6 @@ vector&lt;T> ranSub(const vector&lt;T>& arr,size_t n,bool trunc=false){
     vector&lt;T> res(n);
     unordered_map&lt;size_t,size_t> taken;
     taken.reserve(n);
-    std::default_random_engine generator(time(NULL));
     while(n--){
         std::uniform_int_distribution&lt;size_t> distribution(0,len-1);
         size_t x=distribution(generator);
