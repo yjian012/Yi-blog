@@ -64,6 +64,7 @@ int arraySign(int nums[],int len){
   return r>=0?1:-1;
 }
 ```
+
 ```code2 []
 int arraySign(int nums[],int len){
   int r=1;
