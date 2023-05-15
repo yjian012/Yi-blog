@@ -2,23 +2,7 @@
 title: Leetcode M2466 Optimization
 date: 2023-05-14
 ---
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$','$'],['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
-    processEscapes: true,      
-    processEnvironments: true, 
-    processRefs: true       
-  },
-  options: {
-   ignoreHtmlClass: 'tex2jax_ignore|editor-rich-text'
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+<script src="https://yjian012.github.io/Yi-blog/mathJax.js"/>
 <pre>
 M2466 description:
 Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:
@@ -28,7 +12,7 @@ This can be performed any number of times.
 A good string is a string constructed by the above process having a length between low and high (inclusive).
 Return the number of different good strings that can be constructed satisfying these properties. Since the answer can be large, return it modulo $10^9 + 7$.
 Constraints:
-1 <= low <= high <= 10^5
+1 <= low <= high <= $10^5$
 1 <= zero, one <= low
 </pre>
 An optimization to the typical solution is, noticing that if gcd(zero,one) is not one, we can skip a lot of unnecessary computations.
