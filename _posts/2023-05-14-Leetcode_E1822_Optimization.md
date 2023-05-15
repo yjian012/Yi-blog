@@ -23,7 +23,7 @@ MathJax = {
 </script>
 
 <body>
-<pre>
+
 I think I'll stop posting solutions on leetcode discussion because everyone just posts the same stuff there and anything novel doesn't seem to be recognized, so I'll just post them here instead. Starting from E1822. Sign of the Product of an Array.
 
 Description:
@@ -317,6 +317,6 @@ It indeed saves about 30% to 50% time.
 Further optimization?
 If the 64bit operation is as fast as 32bit operation and "int" is 32bit, it may seem that using e.g. uint_fast64_t would further halve the time because we can do two "xor"s at the same time. But in this case, it doesn't help much because checking 0 would be much more complicated. You would have to define two more constants to check if the first half of the 64 bit int is all 0, then the second half. So it probably doesn't work.
 I think the code above is pretty much optimized for this problem.
-</pre>
+
 </body>
 </html>

@@ -23,7 +23,7 @@ MathJax = {
 </script>
 
 <body>
-<pre>
+
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
     answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
@@ -124,6 +124,6 @@ public:
     }
 };
 ```
-</pre>
+
 </body>
 </html>
