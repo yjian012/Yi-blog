@@ -29,7 +29,7 @@ Constraints:
 1 <= nums1.length, nums2.length <= 1000
 -1000 <= nums1[i], nums2[i] <= 1000
 </pre>
-Almost all the solutions uses two tables, but actually one table is enough.
+Almost all the solutions use two tables, but actually one table is enough.
 
 # Code
 ```
