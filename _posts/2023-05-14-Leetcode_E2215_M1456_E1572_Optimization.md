@@ -1,5 +1,5 @@
 ---
-title: Leetcode_E2215_M1456_E1572_Optimization
+title: Leetcode E2215 M1456 E1572 Optimization
 date: 2023-05-14
 ---
 <html>
@@ -23,7 +23,7 @@ MathJax = {
 </script>
 
 <body>
-<pre class="markdown">
+<pre>
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
     answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
