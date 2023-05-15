@@ -2,8 +2,6 @@
 title: Leetcode E2215 M1456 E1572 Optimization
 date: 2023-05-14
 ---
-<html>
-<title>Leetcode E2215 M1456 E1572 Optimization</title>
 <script>
 MathJax = {
   tex: {
@@ -21,8 +19,6 @@ MathJax = {
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
-
-<body>
 
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
@@ -124,6 +120,3 @@ public:
     }
 };
 ```
-
-</body>
-</html>

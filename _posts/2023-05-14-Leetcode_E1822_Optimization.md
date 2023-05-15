@@ -74,7 +74,9 @@ int arraySign(int nums[],int len){
   return r;
 }
 ```
+
 without optimization:
+
 ```code1 []
 	.cfi_startproc
 	endbr64
@@ -173,7 +175,9 @@ without optimization:
 	ret
 	.cfi_endproc
 ```
+
 with -O1 (same result as -O):
+
 ```code1 []
 	.cfi_startproc
 	endbr64
@@ -231,7 +235,9 @@ with -O1 (same result as -O):
 	jmp	.L1
 	.cfi_endproc
 ```
+
 with -Ofast (same result as -O2 and -O3):
+
 ```code1 []
 	.cfi_startproc
 	endbr64

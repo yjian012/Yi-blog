@@ -2,8 +2,6 @@
 title: Leetcode M2466 Optimization
 date: 2023-05-14
 ---
-<html>
-<title>Leetcode M2466 Optimization</title>
 <script>
 MathJax = {
   tex: {
@@ -22,7 +20,6 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
-<body>
 M2466 description:
 Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:
     Append the character '0' zero times.
@@ -100,5 +97,3 @@ unordered_map&lt;long long,vector<int>> lookUp;
 long long st=(long long)s*100000+l;
 ```
 which may be faster than converting to a string? I'm just too lazy to write a hash for pair<int,int> ...
-</body>
-</html>
