@@ -3,7 +3,7 @@ title: An algorithm to iterate through all perfect matchings on a complete graph
 date: 2023-05-14
 ---
 <html>
-<title></title>
+<title>An algorithm to iterate through all perfect matchings on a complete graph (Chord diagram)</title>
 <script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
 <body>
 <p>
