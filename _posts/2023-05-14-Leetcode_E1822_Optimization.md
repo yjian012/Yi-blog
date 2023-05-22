@@ -1,5 +1,5 @@
 ---
-title: Leetcode E1822 Optimization
+title: Leetcode E1822 Sign of the Product of an Array Optimization
 date: 2023-05-14
 ---
 <script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
@@ -16,7 +16,7 @@ Return signFunc(product).
 It's very easy. But can you find the most optimized way to solve it? Comparing with normal approach, a simple modification may speed up your code 70% to 100%.
 
 # Code
-```
+```cpp
 class Solution {
 public:
     int arraySign(vector<int>& nums) {
@@ -34,8 +34,8 @@ public:
 
 edit:
 So I took a look at the assembly code that the following two codes generate,
-
-```code1
+Code1
+```cpp
 int arraySign(int nums[],int len){
   int r=1;
   for(int i=0;i<len;++i){
@@ -45,8 +45,8 @@ int arraySign(int nums[],int len){
   return r>=0?1:-1;
 }
 ```
-
-```code2
+Code2
+```cpp
 int arraySign(int nums[],int len){
   int r=1;
   for(int i=0;i<len;++i){

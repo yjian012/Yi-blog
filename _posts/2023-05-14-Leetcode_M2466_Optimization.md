@@ -1,5 +1,5 @@
 ---
-title: Leetcode M2466 Optimization
+title: Leetcode M2466 Count Ways To Build Good Strings Optimization
 date: 2023-05-14
 ---
 <script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
@@ -20,7 +20,7 @@ An optimization to the typical solution is, noticing that if gcd(zero,one) is no
 We can save what we've calculated for future inputs.
 
 # Code
-```
+```cpp
 class Solution {
     const int mo=1000000007;
     unordered_map<string,vector<int>> lookUp;
@@ -76,7 +76,7 @@ public:
 };
 ```
 In this case we may change it to
-```
+```cpp
 unordered_map<long long,vector<int>> lookUp;
 long long st=(long long)s*100000+l;
 ```

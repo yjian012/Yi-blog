@@ -1,5 +1,5 @@
 ---
-title: Leetcode E2215 M1456 E1572 Optimization
+title: Leetcode E2215 Find the Difference of Two Arrays, M1456 Maximum Number of Vowels in a Substring of Given Length, E1572 Matrix Diagonal Sum Optimization
 date: 2023-05-14
 ---
 <script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
@@ -16,7 +16,7 @@ Constraints:
 Almost all the solutions use two tables, but actually one table is enough.
 
 # Code
-```
+```cpp
 char tab_b[2001];
 char* tab=tab_b+1000;
 class Solution {
@@ -60,7 +60,7 @@ Another very easy problem. But is your solution optimized?
 The following method may be 10 times faster:
 
 # Code
-```
+```cpp
 class Solution {
     bool isVow['z'+1]={false};
     void isVowInit(){
@@ -95,7 +95,7 @@ Given a square matrix mat, return the sum of the matrix diagonals.
 Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
 </pre>
 Also very easy. But instead of checking if we are at the center every time, we can just check it once at the end. Also we can do it in one iterations instead of 2.
-```
+```cpp
 class Solution {
 public:
     int diagonalSum(const vector<vector<int>>& mat) {
