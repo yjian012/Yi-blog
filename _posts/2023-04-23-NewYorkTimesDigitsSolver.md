@@ -52,7 +52,7 @@ An Example of Bad Code
 <p>
 I took a look at their JS code for puzzle generation, and I found this function:
 </p>
-```js
+```javascript
 function getSmartOperation(firstNum, secondNum) {
   var randInt = getRandomInt(0, 100)
   const quotient = firstNum / secondNum
