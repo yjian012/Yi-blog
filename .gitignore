@@ -1,4 +1,8 @@
+.gitignore
+.tgitconfig
+
 0 template.md
+0 template.html
 
 # Compiled source #
 ###################

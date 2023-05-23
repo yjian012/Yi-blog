@@ -6,5 +6,5 @@ pre{
   word-break: keep-all;
 }
 code{
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
