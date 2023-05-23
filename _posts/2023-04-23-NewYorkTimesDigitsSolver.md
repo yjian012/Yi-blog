@@ -52,7 +52,7 @@ An Example of Bad Code
 <p>
 I took a look at their JS code for puzzle generation, and I found this function:
 </p>
-<pre>
+```js
 function getSmartOperation(firstNum, secondNum) {
   var randInt = getRandomInt(0, 100)
   const quotient = firstNum / secondNum
@@ -80,7 +80,7 @@ function getSmartOperation(firstNum, secondNum) {
     return getSmartOperation(firstNum, secondNum)
   }
 }
-</pre>
+```
 <p>
 This is part of their algorithm to generate the target number from a randomly generated numbers' list. The problem with this function is in the last statement. If all the attempts to find an appropriate operator for the two numbers fail, it puts the same two numbers back into the function and repeats the process. Since  the numbers are randomly generated, there's 50% chance that the first number is less than the second number, so when they are put back, if the RNG rolls to $-$ or $/$ again, it would just be a waste of time and we just roll the RNG again until it ends up being $+$ or $*$. The worse thing is, if the first number is smaller than the second number, and their summation and product are both larger than 999, the recursion will never end. (It doesn't happen in this particular scenario because the second number is always from the original list, which seems to be always small ($\leq 25$ from what I see), so if the first number $+$ the second one $\geq 999$, then the first number must be greater than the second one, so $-$ is always valid. But still, this function is bad in itself.)
 </p>
