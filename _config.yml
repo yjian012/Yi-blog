@@ -1,1 +1,12 @@
 theme: minima
+
+
+steps:
+- name: Checkout the repo
+  uses: actions/checkout@v3
+  with:
+    fetch-depth: 0 
+- name: generate-sitemap
+  uses: cicirello/generate-sitemap@v1.9.1
+  with:
+        base-url-path: https://yjian012.github.io/Yi-blog/

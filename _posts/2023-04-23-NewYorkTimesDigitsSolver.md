@@ -4,23 +4,8 @@ date: 2023-04-23
 ---
 <html>
 <title>New York Times Digits Solver</title>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$','$'],['\\(','\\)'] ],
-    displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
-    processEscapes: true,      
-    processEnvironments: true, 
-    processRefs: true       
-  },
-  options: {
-   ignoreHtmlClass: 'tex2jax_ignore|editor-rich-text'
-  }
-};
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 <body>
 <h2>
 Solver

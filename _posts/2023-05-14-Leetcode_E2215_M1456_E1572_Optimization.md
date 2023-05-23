@@ -2,7 +2,8 @@
 title: Leetcode E2215 Find the Difference of Two Arrays, M1456 Maximum Number of Vowels in a Substring of Given Length, E1572 Matrix Diagonal Sum Optimization
 date: 2023-05-14
 ---
-<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 <pre>
 E2215 description:
 Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:

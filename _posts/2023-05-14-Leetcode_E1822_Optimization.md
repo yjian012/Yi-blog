@@ -2,7 +2,8 @@
 title: Leetcode E1822 Sign of the Product of an Array Optimization
 date: 2023-05-14
 ---
-<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 I think I'll stop posting solutions on leetcode discussion because everyone just posts the same stuff there and anything novel doesn't seem to be recognized, so I'll just post them here instead. Starting from E1822. Sign of the Product of an Array.
 <pre>
 Description:

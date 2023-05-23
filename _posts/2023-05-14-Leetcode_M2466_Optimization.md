@@ -2,7 +2,8 @@
 title: Leetcode M2466 Count Ways To Build Good Strings Optimization
 date: 2023-05-14
 ---
-<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 <pre>
 M2466 description:
 Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:

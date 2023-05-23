@@ -4,7 +4,8 @@ date: 2023-05-14
 ---
 <html>
 <title>An algorithm to iterate through all perfect matchings on a complete graph (Chord diagram)</title>
-<script src="https://yjian012.github.io/Yi-blog/mathJax.js"></script>
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 <body>
 <p>
 I thought this function was helpful for solving another problem. It did work, but it was unnecessary since there were faster algorithms to solve it. But I was interested, so I ended up finishing it.
