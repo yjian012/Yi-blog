@@ -2,12 +2,8 @@
 title: "Random Subarray Algorithm"
 date: 2023-04-27
 ---
-<html>
-<title>Random Subarray Algorithm</title>
 <script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
 <link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
-
-<body>
 <p>
 After I discussed with someone else who also wrote a Digits solver, I looked into a little bit more of the codes that they used to generate the puzzles. I noticed an interesting function there:
 </p>
@@ -56,6 +52,7 @@ But the first function has a few advantages in certain circumstances. One issue 
 On another note, I noticed that this function is an exact copy of <a href="https://stackoverflow.com/a/19270021/2692551">this answer</a>. I wonder if it's by the same author... or someone just googled it and copied this. XD</p>
 <p>
 Anyway, here's my implementation of this algorithm in C++:</p>
+
 ```cpp
 #include&lt;time.h&gt;
 #include&lt;vector&gt;
@@ -86,6 +83,3 @@ vector&lt;T> ranSub(const vector&lt;T>& arr,size_t n,bool trunc=false){
     return res;
 }
 ```
-
-</body>
-</html>

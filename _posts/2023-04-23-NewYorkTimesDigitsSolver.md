@@ -2,11 +2,8 @@
 title: "New York Times Digits Solver"
 date: 2023-04-23
 ---
-<html>
-<title>New York Times Digits Solver</title>
 <script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
 <link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
-<body>
 <h2>
 Solver
 </h2>
