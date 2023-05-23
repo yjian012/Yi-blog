@@ -49,7 +49,7 @@ An Example of Bad Code
 <p>
 I took a look at their JS code for puzzle generation, and I found this function:
 </p>
-```javascript
+```js
 function getSmartOperation(firstNum, secondNum) {
   var randInt = getRandomInt(0, 100)
   const quotient = firstNum / secondNum
@@ -83,7 +83,6 @@ This is part of their algorithm to generate the target number from a randomly ge
 </p>
 <p>
 A better approach is, exchange the two numbers if the first is less than the second, then attemp to assign the division operator with high probability. If they are not divisible, try multiplying and adding with their assigned probabilities. If both fail, just assign the $-$ operator, because the first number is larger or equal to the second number and the difference must be less or equal to the first number, it's guaranteed that the result is a valid number.</p>
-</body>
 
 <script>
 let sol = {
@@ -209,4 +208,3 @@ function display() {
 }
 function hideEle(ele){document.getElementById(ele).style.display='None'}
 </script>
-</html>

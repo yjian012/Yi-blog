@@ -54,28 +54,28 @@ On another note, I noticed that this function is an exact copy of <a href="https
 Anyway, here's my implementation of this algorithm in C++:</p>
 
 ```cpp
-#include&lt;time.h&gt;
-#include&lt;vector&gt;
-#include&lt;unordered_map&gt;
-#include&lt;random&gt;
-#include&lt;chrono&gt;
+#include<time.h>
+#include<vector>
+#include<unordered_map>
+#include<random>
+#include<chrono>
 
 std::default_random_engine generator(chrono::system_clock::now().time_since_epoch().count());
 
 using std::vector;
 using std::unordered_map;
-template &lt;typename T&gt;
-vector&lt;T> ranSub(const vector&lt;T>& arr,size_t n,bool trunc=false){
-    if(arr.size()&lt;n){
+template <typename T>
+vector<T> ranSub(const vector<T>& arr,size_t n,bool trunc=false){
+    if(arr.size()<n){
         if(trunc) n=arr.size();
         else throw;
     }
     size_t len=arr.size();
-    vector&lt;T> res(n);
-    unordered_map&lt;size_t,size_t> taken;
+    vector<T> res(n);
+    unordered_map<size_t,size_t> taken;
     taken.reserve(n);
     while(n--){
-        std::uniform_int_distribution&lt;size_t> distribution(0,len-1);
+        std::uniform_int_distribution<size_t> distribution(0,len-1);
         size_t x=distribution(generator);
         res[n]=arr[taken.find(x)!=taken.end()?taken[x]:x];
         taken[x]=taken.find(--len)!=taken.end()?taken[len]:len;
