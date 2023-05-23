@@ -5,6 +5,3 @@ pre{
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-break: keep-all;
 }
-code{
-  white-space: nowrap !important;
-}
