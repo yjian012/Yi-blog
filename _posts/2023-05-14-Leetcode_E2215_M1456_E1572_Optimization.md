@@ -6,13 +6,13 @@ date: 2023-05-14
 <link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 <pre>
 E2215 description:
-Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
+  Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
     answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
     answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
-Note that the integers in the lists may be returned in any order.
+  Note that the integers in the lists may be returned in any order.
 Constraints:
-1 <= nums1.length, nums2.length <= 1000
--1000 <= nums1[i], nums2[i] <= 1000
+  1 <= nums1.length, nums2.length <= 1000
+  -1000 <= nums1[i], nums2[i] <= 1000
 </pre>
 Almost all the solutions use two tables, but actually one table is enough.
 
@@ -50,12 +50,12 @@ Memory 26.7 MB Beats 94.43%
 ---
 <pre>
 M1456 description:
-Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
-Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+  Given a string s and an integer k, return the maximum number of vowel letters in any substring of s with length k.
+  Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 Constraints:
-1 <= s.length <= $10^5$
-s consists of lowercase English letters.
-1 <= k <= s.length
+  1 <= s.length <= $10^5$
+  s consists of lowercase English letters.
+  1 <= k <= s.length
 </pre>
 Another very easy problem. But is your solution optimized?
 The following method may be 10 times faster:
@@ -91,9 +91,8 @@ public:
 ---
 <pre>
 E1572 description:
-Given a square matrix mat, return the sum of the matrix diagonals.
-
-Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
+  Given a square matrix mat, return the sum of the matrix diagonals.
+  Only include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.
 </pre>
 Also very easy. But instead of checking if we are at the center every time, we can just check it once at the end. Also we can do it in one iterations instead of 2.
 ```cpp

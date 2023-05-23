@@ -15,7 +15,8 @@ The algorithm iterates through all possible ways to match $2n$ points, i.e. <a h
 Input constraints: $v.size()$ is even, elements are distinct and comparable, $v[2i]&lt;v[2i+1]$.<br/>
 Complexity: $O(n)$
 </p>
-```
+
+```cpp
 template&lt;typename T>
 bool next_matching(vector&lt;T>& v){
     if(v.size()&lt;=2) {return false;}
@@ -45,7 +46,8 @@ bool next_matching(vector&lt;T>& v){
 <p>
 Sample output:
 </p>
-```
+
+```cpp
 vector&lt;vector&lt;int>> allMatchings(int n){
     vector&lt;int> v(n);
     for(int i=0;i&lt;n;++i) v[i]=i;
