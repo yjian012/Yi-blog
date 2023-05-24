@@ -18,7 +18,7 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://yjian012.github.io/
+        base-url-path: https://yjian012.github.io/Yi-blog/
         
     - name: Output stats
       run: |
