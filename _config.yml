@@ -1,1 +1,5 @@
 theme: minima
+
+url: "https://yjian012.github.io/Yi-blog/"
+plugins:
+  - jekyll-sitemap
