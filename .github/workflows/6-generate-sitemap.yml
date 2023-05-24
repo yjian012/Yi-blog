@@ -19,7 +19,8 @@ jobs:
       uses: cicirello/generate-sitemap@v1
       with:
         base-url-path: https://yjian012.github.io/Yi-blog/
-        path-to-root: ./_site
+        path-to-root: .
+        additional-extensions: md
         
     - name: Output stats
       run: |
