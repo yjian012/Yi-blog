@@ -1,12 +1,11 @@
 name: Generate xml sitemap
 on:
-  push:
-    branches:
-        - main
+  workflow_dispatch:
+  page_build:
 permissions:
     contents: write
 jobs:
-    on_enable_github_pages:
+    sitemap_job:
         name: Generate a sitemap
         if: ${{ !github.event.repository.is_template }}
         runs-on: ubuntu-latest
