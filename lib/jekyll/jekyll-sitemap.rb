@@ -23,7 +23,7 @@ module Jekyll
       .pdf
       .xml
     ).freeze
-
+    
     # Matches all whitespace that follows
     #   1. A '>' followed by a newline or
     #   2. A '}' which closes a Liquid tag
