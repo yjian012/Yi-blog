@@ -1,7 +1,9 @@
 name: Generate xml sitemap
 on:
   workflow_dispatch:
-  page_build:
+  push:
+    branches:
+        - main
 permissions:
     contents: write
 jobs:
@@ -21,7 +23,7 @@ jobs:
           uses: cicirello/generate-sitemap@v1
           with:
             base-url-path: https://yjian012.github.io/Yi-blog/
-            path-to-root: .
+            path-to-root: gh-pages
             additional-extensions: md
             
         - name: Output stats
