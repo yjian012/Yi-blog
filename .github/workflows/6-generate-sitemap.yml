@@ -3,27 +3,31 @@ on:
   push:
     branches:
         - main
+permissions:
+    contents: write
 jobs:
-  sitemap_job:
-    name: Generate a sitemap
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout the repo
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0 
+    on_enable_github_pages:
+        name: Generate a sitemap
+        if: ${{ !github.event.repository.is_template }}
+        runs-on: ubuntu-latest
         
-    - name: Generate the sitemap
-      id: sitemap
-      uses: cicirello/generate-sitemap@v1
-      with:
-        base-url-path: https://yjian012.github.io/Yi-blog/
-        path-to-root: .
-        additional-extensions: md
-        
-    - name: Output stats
-      run: |
-        echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
-        echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
-        echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
+        steps:
+        - name: Checkout the repo
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0 
+          ref: my-pages
+            
+        - name: Generate the sitemap
+          id: sitemap
+          uses: cicirello/generate-sitemap@v1
+          with:
+            base-url-path: https://yjian012.github.io/Yi-blog/
+            path-to-root: .
+            additional-extensions: md
+            
+        - name: Output stats
+          run: |
+            echo "sitemap-path = ${{ steps.sitemap.outputs.sitemap-path }}"
+            echo "url-count = ${{ steps.sitemap.outputs.url-count }}"
+            echo "excluded-count = ${{ steps.sitemap.outputs.excluded-count }}"
