@@ -29,7 +29,7 @@ I tried to see if the shapes actually match. The data was from [Spherical Codes]
 
 Light color means the vertex is in the front, dark color means it's in the back.
 I also found more images on the internet (Credit to Steven Haddock and MBARI), and I tried to match those, too:
-![Tuscaridium cygneum match vertex](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 2.PNG)
+![Tuscaridium cygneum match vertex](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 2.jpg)
 They seem to line up in some degree, but not perfectly.
 
 I also noticed that there could be more than 8 capsules, as the following picture shows:
