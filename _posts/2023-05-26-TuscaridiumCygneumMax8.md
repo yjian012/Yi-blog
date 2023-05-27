@@ -7,7 +7,7 @@ date: 2023-05-26
 
 ![Tuscaridium cygneum](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 2.PNG)
 I saw this thing on a [youtube video](https://www.youtube.com/watch?v=GETuoG_bN2w ), and I thought I recognized the shape. Here is my original comment:
-
+<pre>
 <blockquote>
 Wait... This shape... I think I've seen this shape, the interesting symmetry.
 The voice in the video says that it has "7 arms", but that's not true, there're actually 8 arms. And it looks surprisingly symmetric.
@@ -21,7 +21,7 @@ I wonder how this naturally happens. Maybe this shape is also the solution to "i
 We should give this polyhedron a name. How about "Tuscaridron"? (What does "Tuscaridium" mean anyway?)
 This is such an astonishing finding, I'm deeply intrigued by the beauty of the nature...
 </blockquote>
-
+</pre>
 And it got deleted immediately. Probably because it was long and had links. But still, youtube's spam detection is crap. It happened quite a few times before, too, so I had the habbit to copy my comment somewhere else before posting them. After all, if you want to talk about something serious, youtube comment is not the best place to post it anyway.
 
 I tried to see if the shapes actually match. The data was from [Spherical Codes](http://neilsloane.com/maxvolumes/), graphed on [GeoGebra](https://www.geogebra.org/3d).
