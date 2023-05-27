@@ -8,7 +8,8 @@ date: 2023-05-26
 ![Tuscaridium cygneum](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 2.PNG)
 I saw this thing on a [youtube video](https://www.youtube.com/watch?v=GETuoG_bN2w ), and I thought I recognized the shape. Here is my original comment:
 
->Wait... This shape... I think I've seen this shape, the interesting symmetry.
+<blockquote>
+Wait... This shape... I think I've seen this shape, the interesting symmetry.
 The voice in the video says that it has "7 arms", but that's not true, there're actually 8 arms. And it looks surprisingly symmetric.
 If we take each "arm" as a vertex, It has 8 vertices and all of its faces are triangles. 
 At first I thought of a regular octahedron whose faces are all equilateral triangles, but it has 6 vertices. It's definitely not a cube either.
@@ -19,11 +20,12 @@ I believe this is the same shape.
 I wonder how this naturally happens. Maybe this shape is also the solution to "if I put 8 equal charges on a sphere and they can move freely on the sphere, what shape do they make in equilibrium?". Maybe that's exactly how it's formed: 8 "bud"s were released to the surface, and they repelled each other... eventually they ended up in this shape.
 We should give this polyhedron a name. How about "Tuscaridron"? (What does "Tuscaridium" mean anyway?)
 This is such an astonishing finding, I'm deeply intrigued by the beauty of the nature...
+</blockquote>
 
 And it got deleted immediately. Probably because it was long and had links. But still, youtube's spam detection is crap. It happened quite a few times before, too, so I had the habbit to copy my comment somewhere else before posting them. After all, if you want to talk about something serious, youtube comment is not the best place to post it anyway.
 
 I tried to see if the shapes actually match. The data was from [Spherical Codes](http://neilsloane.com/maxvolumes/), graphed on [GeoGebra](https://www.geogebra.org/3d).
-![Tuscaridium cygneum match vertex](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 3.PNG)
+![Tuscaridium cygneum match vertex](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 3.png)
 
 Light color means the vertex is in the front, dark color means it's in the back.
 I also found more images on the internet (Credit to Steven Haddock and MBARI), and I tried to match those, too:
