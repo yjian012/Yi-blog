@@ -6,6 +6,7 @@ date: 2023-05-26
 <link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
 
 ![Tuscaridium cygneum](/Yi-blog/img/2023-05-26-Tuscaridium cygneum 2.PNG)
+
 I saw this thing on a [youtube video](https://www.youtube.com/watch?v=GETuoG_bN2w ), and I thought I recognized the shape. Here is my original comment:
 <pre>
 <blockquote>
@@ -33,8 +34,8 @@ I also found more images on the internet (Credit to Steven Haddock and MBARI), a
 They seem to line up in some degree, but not perfectly.
 
 I also noticed that there could be more than 8 capsules, as the following picture shows:
-![image](/Yi-blog/img/2023-05-26-p3.jpg)
-I'm not sure what that shape is. From what I've read, it seems that the number of capsules is often a multiple of 8, so there're probably 16 in this one. Also, I don't think the shape of the bottom one matches the 8-vertex maximum volume polyhedron, even though there're exactly 8 capsules. I wonder what the shape is - the 4 on the bottom seems to form a square.
+![Tuscaridium cygneum more capsules](/Yi-blog/img/2023-05-26-p3.jpg)
+I'm not sure what that shape is. From what I've read, it seems that the number of capsules is often a multiple of 8, so there're probably 16 in this one. Also, I don't think the shape of the bottom one matches the 8-vertex maximum volume polyhedron, even though there're exactly 8 capsules. I wonder what the shape is - the 4 on the bottom seem to form a square.
 
 On the other hand, I also thought about the other problem: If I put $n$ point charges on a sphere and they can move freely on the sphere, what shape do they make in equilibrium? While I was writing a program to find out, I took a look at the links again and noticed that in another [question](https://mathoverflow.net/questions/429497/known-configurations-maximizing-the-volume-of-the-convex-hull-of-n-points-on-the) they mentioned the [Thomson problem](https://en.wikipedia.org/wiki/Thomson_problem), which is exactly what I thought about. Apparently the solution for 8 vertices is a square antiprism - which doesn't seem to match any of the shapes above (except that there seem to be a squre at the bottom in the last picture above). A closely related problem, [Tammes problem](https://en.wikipedia.org/wiki/Tammes_problem), has exactly the same solution to 8 vertices. The proof can be found [here](https://pdodds.w3.uvm.edu/teaching/courses/2009-08UVM-300/docs/others/1994/mooers1994a.pdf).
 
