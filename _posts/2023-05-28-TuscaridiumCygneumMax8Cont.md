@@ -38,7 +38,7 @@ Which is indeed a square antiprism.
 
 I also tried the Whyte's problem (I didn't find any reference about this problem, except that the name was mentioned on wikipedia), where the force is inversly proportional to the distance. The result is
 <pre>
-function=$\sum \ln r_{ij}$ (Whyte's problem), 8 vertices:
+function=$\sum -\ln r_{ij}$ (Whyte's problem), 8 vertices:
  0.0     , 0.0     , 1.0     ,
 -0.96761 , 0.171449, 0.185302,
 -0.082313, 0.97464 , 0.208092,
