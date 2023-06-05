@@ -1,4 +1,5 @@
 ---
 title: Welcome to my blog
 ---
-
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
