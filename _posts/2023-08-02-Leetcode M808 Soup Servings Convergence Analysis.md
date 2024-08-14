@@ -473,16 +473,14 @@ and the even layers
 Now they no longer alternate.
 Is it possible to prove that it can only decrease for a finite amount of times before it starts to increase monotonically?
 Let's take a look at a diagonal line that's further away. Here are the differences of the elements on the 10th diagonal:
-odd layers:
 </pre>
 <pre style="max-width:100%;white-space:pre;">
+odd layers:
            0,-0.000488281,-0.000488281,-0.000366211,-0.000267029,-0.000171661,-9.20296e-05, -3.0756e-05,   1.508e-05, 4.81904e-05,
  7.11586e-05, 8.62759e-05, 9.54153e-05, 0.000100072, 0.000101421, 0.000100375,  9.7634e-05, 9.37348e-05,  8.9083e-05, 8.39835e-05,
 </pre>
-<pre>
-even layers:
-</pre>
 <pre style="max-width:100%;white-space:pre;">
+even layers:
            0,-0.000366211,-0.000427246,-0.000335693,-0.000244141,-0.000161171,-9.08375e-05,-3.57032e-05, 5.90086e-06, 3.63067e-05,
   5.7715e-05, 7.20862e-05, 8.10546e-05, 8.59372e-05, 8.77771e-05, 8.73906e-05, 8.54098e-05, 8.23208e-05, 7.84945e-05, 7.42116e-05,
 </pre>
