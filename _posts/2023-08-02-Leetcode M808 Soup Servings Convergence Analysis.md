@@ -10,14 +10,14 @@ date: 2023-08-02
 <script>
     function loadScript(src){
       return new Promise(function(resolve, reject){
-        let script = document.createElement(&#39;script&#39;);
+        let script = document.createElement('script');
         script.src = src;
-        script.onload = () =&gt; resolve(script);
-        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        script.onload = () => resolve(script);
+        script.onerror = () => reject(new Error(`Script load error for ${src}`));
         document.head.append(script);
       });
     }
-    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+    loadScript("https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js").then(script=>loadScript("https://yjian012.github.io/Yi-blog/js/scripts.js"));
   //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
 </script>
 
