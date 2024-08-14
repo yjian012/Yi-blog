@@ -3,24 +3,23 @@ title: IBM Ponder this 2023 09 solution
 date: 2023-11-07
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
-    
-    <script>
-        function loadScript(src){
-          return new Promise(function(resolve, reject){
-            let script = document.createElement(&#39;script&#39;);
-            script.src = src;
-            script.onload = () =&gt; resolve(script);
-            script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
-            document.head.append(script);
-          });
-        }
-        loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
-      //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
-    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
+<script>
+    function loadScript(src){
+      return new Promise(function(resolve, reject){
+        let script = document.createElement(&#39;script&#39;);
+        script.src = src;
+        script.onload = () =&gt; resolve(script);
+        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        document.head.append(script);
+      });
+    }
+    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+  //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
+</script>
 <pre>
 The problem can be found <a href="https://research.ibm.com/haifa/ponderthis/challenges/September2023.html">here</a>.
 Since the <a href="https://research.ibm.com/haifa/ponderthis/solutions/September2023.html">solution</a> has been posted on the website, here's my solution:

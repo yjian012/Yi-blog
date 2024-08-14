@@ -3,24 +3,23 @@ title: The limit of an averaging sequence
 date: 2024-05-08
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
-    
-    <script>
-        function loadScript(src){
-          return new Promise(function(resolve, reject){
-            let script = document.createElement(&#39;script&#39;);
-            script.src = src;
-            script.onload = () =&gt; resolve(script);
-            script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
-            document.head.append(script);
-          });
-        }
-        loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
-      //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
-    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
+<script>
+    function loadScript(src){
+      return new Promise(function(resolve, reject){
+        let script = document.createElement(&#39;script&#39;);
+        script.src = src;
+        script.onload = () =&gt; resolve(script);
+        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        document.head.append(script);
+      });
+    }
+    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+  //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
+</script>
 
 <pre>Consider this sequence of length $n$: $P_n=(p_0,p_1,p_2,\dots,p_{n-1})$, where $p_0=2$, and each time the next number $p_k$ can be any number within $[2,1+p_{k-1}]$ for $k\in [1,n-1]$. Consider the set of all such sequences of length $n$, $\{P_n\}$. The first few sets are:
 \begin{align*}n=1:&amp; (2)\\

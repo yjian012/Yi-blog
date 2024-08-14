@@ -3,23 +3,23 @@ title: The long journey from O(n^2) to O(n^1.5), Leetcode H1269. Number of Ways 
 date: 2023-10-18
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
-    <script>
-        function loadScript(src){
-          return new Promise(function(resolve, reject){
-            let script = document.createElement(&#39;script&#39;);
-            script.src = src;
-            script.onload = () =&gt; resolve(script);
-            script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
-            document.head.append(script);
-          });
-        }
-        loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
-      //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
-    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
+<script>
+    function loadScript(src){
+      return new Promise(function(resolve, reject){
+        let script = document.createElement(&#39;script&#39;);
+        script.src = src;
+        script.onload = () =&gt; resolve(script);
+        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        document.head.append(script);
+      });
+    }
+    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+  //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
+</script>
 <pre>H1269 description:
 <blockquote>
 You have a pointer at index 0 in an array of size arrLen. At each step, you can move 1 position to the left, 1 position to the right in the array, or stay in the same place (The pointer should not be placed outside the array at any time).

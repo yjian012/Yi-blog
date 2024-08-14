@@ -3,24 +3,23 @@ title: Probability of line segments intersecting - A surprisingly simple result
 date: 2023-10-29
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
-    
-    <script>
-        function loadScript(src){
-          return new Promise(function(resolve, reject){
-            let script = document.createElement(&#39;script&#39;);
-            script.src = src;
-            script.onload = () =&gt; resolve(script);
-            script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
-            document.head.append(script);
-          });
-        }
-        loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
-      //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
-    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
+<script>
+    function loadScript(src){
+      return new Promise(function(resolve, reject){
+        let script = document.createElement(&#39;script&#39;);
+        script.src = src;
+        script.onload = () =&gt; resolve(script);
+        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        document.head.append(script);
+      });
+    }
+    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+  //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
+</script>
 <pre>I was drawing random stuff on a piece of paper, suddenly this problem came into my mind:
 <blockquote>If I draw a length 1 line segment randomly, then draw another one, what's the probability that they'll intersect?</blockquote>
 Of course this description is ambiguous. To give a better description, we need to define things more accurately. First, we should limit the area that we can draw the line segments in. Second, we should define what it means by "drawing a line segment randomly".

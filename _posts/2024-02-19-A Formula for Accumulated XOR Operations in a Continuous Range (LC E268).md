@@ -3,24 +3,23 @@ title: A Formula for Accumulated XOR Operations in a Continuous Range (LC E268)
 date: 2024-02-19
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
-    
-    <script>
-        function loadScript(src){
-          return new Promise(function(resolve, reject){
-            let script = document.createElement(&#39;script&#39;);
-            script.src = src;
-            script.onload = () =&gt; resolve(script);
-            script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
-            document.head.append(script);
-          });
-        }
-        loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
-      //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
-    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
+<script>
+    function loadScript(src){
+      return new Promise(function(resolve, reject){
+        let script = document.createElement(&#39;script&#39;);
+        script.src = src;
+        script.onload = () =&gt; resolve(script);
+        script.onerror = () =&gt; reject(new Error(`Script load error for ${src}`));
+        document.head.append(script);
+      });
+    }
+    loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
+  //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
+</script>
 <pre>I came up with this formula when I was solving E268. Missing Number again.
 
 Description:
