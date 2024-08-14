@@ -3,14 +3,11 @@ title: A Formula for Accumulated XOR Operations in a Continuous Range (LC E268)
 date: 2024-02-19
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-    <!--markdown-->
-    <!--script src='https://polyfill.io/v3/polyfill.min.js?features=es6'/-->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>
     
-    <!--markdown then mathjax-->
     <script>
         function loadScript(src){
           return new Promise(function(resolve, reject){
