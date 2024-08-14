@@ -4,12 +4,12 @@ date: 2023-05-28
 ---
 <script src="/Yi-blog/js/scripts.js"></script>
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-<pre><a href="https://hyper-meta.blogspot.com/2023/05/tuscaridium-cygneum-and-maximum-8.html"><span style="font-size: medium;">Previously...</span></a>
+<a href="https://hyper-meta.blogspot.com/2023/05/tuscaridium-cygneum-and-maximum-8.html"><span style="font-size: medium;">Previously...</span></a>
 
 So I wrote a short program to calculate the shapes that correspond to those problems that were mentioned in the previous post. Actually, the first one that I ran did not correspond to any of them. I was thinking, maybe the mechanism is on the surface, so instead of using a function of the distances between the points, maybe I should use a function that corresponds to the distance on the surface - or equivalently, the angle between them? Suppose that the capsules keep releasing a certain chemical on the surface that repels other capsules, so that they will find the spot that has the least concentration of the chemical, and the chemical degrades in time. The concentration from each capsule would be inversely proportional to the distance on the surface. If I assume the "force" is proportional to the concentration, the energy would be log of the angle.
 
 I thought the solution would be similar to the cases with the Euclidean distance - but it's totally different. I was surprised by the result!
-</pre>
+
 <pre>
 function=$-\sum\ln\delta_{ij}$, 8 vertices:
  0.0      , 0.0     , 1.0     ,
