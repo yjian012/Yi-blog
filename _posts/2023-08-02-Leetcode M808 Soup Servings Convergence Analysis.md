@@ -351,6 +351,8 @@ And the pattern continues. The coefficients goes like this:
         1  3   6   10  12  12  10  6   3   1
     1   4  10  20  31  40  44  40  31  20  10  4  1
 (more rows up to the 11th:
+</pre>
+<pre style="max-width:100%">
 1,5,15,35,65,101,135,155,155,135,101,65,35,15,5,1,
 1,6,21,56,120,216,336,456,546,580,546,456,336,216,120,56,21,6,1,
 1,7,28,84,203,413,728,1128,1554,1918,2128,2128,1918,1554,1128,728,413,203,84,28,7,1,
@@ -423,7 +425,11 @@ What else can we do, then? In the previous calculations, we're trying to find an
 Let's go back to the grid, maybe.
 The proof would be trivial if all the values increase monotonically along any vertical line. But unfortunately that is not the case. The elements in the top $10 \times 10$ grid are
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
      0.625,      0.75,     0.875,         1,         1,         1,         1,         1,         1,         1,
        0.5,     0.625,      0.75,   0.90625,    0.9375,   0.96875,         1,         1,         1,         1,
      0.375,       0.5,   0.65625,    0.8125,     0.875,    0.9375,  0.976562,  0.984375,  0.992188,         1,
@@ -438,7 +444,11 @@ The proof would be trivial if all the values increase monotonically along any ve
 <pre>
 The diagonal line is indeed increasing, but the third diagonal line has elements 0.875, 0.90625, 0.875, 0.890625, 0.890625, 0.902344, 0.900391, 0.912109... which increases and decreases alternately. And that is not the only diagonal line that shows this behavior. Let's take the 5th diagonal line as an example, the first few elements are
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
        1,       1,0.984375,0.984375,0.980469,0.980469,0.978516,0.979492,0.978271,0.979492,
 0.979004,0.980286,0.980179,0.981461,0.981567,0.982796, 0.98303, 0.98418,0.984484,0.985547,
 0.985884,0.986855,0.987203,0.988086, 0.98843,0.989229, 0.98956,0.990281,0.990595,0.991244,
@@ -448,7 +458,11 @@ The diagonal line is indeed increasing, but the third diagonal line has elements
 <pre>
 It's not easy to tell if it increases or decreases. Let's see their differences:
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
            0,   -0.015625,           0, -0.00390625,           0, -0.00195312, 0.000976562,  -0.0012207,   0.0012207,-0.000488281,
   0.00128174,-0.000106812,  0.00128174, 0.000106812,  0.00122833, 0.000234604,  0.00115013, 0.000303984,  0.00106215, 0.000337005,
  0.000971675, 0.000347495, 0.000883162, 0.000343844, 0.000799075, 0.000331543, 0.000720632, 0.000314187,  0.00064834,  0.00029413,
@@ -458,14 +472,22 @@ It's not easy to tell if it increases or decreases. Let's see their differences:
 It alternates for about 12 times, then it keeps increasing.
 Remembering that there are two independent sets of layers, we should find the differences within each set. The differences within the odd layers are
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
    -0.015625, -0.00390625, -0.00195312,-0.000244141, 0.000732422,  0.00117493,  0.00138855,  0.00146294,  0.00145411,  0.00139916,
   0.00131917,  0.00122701,  0.00113062,  0.00103482,  0.00094247,  0.00085519, 0.000773808, 0.000698651, 0.000629726, 0.000566848,
 </pre>
 <pre>
 and the even layers
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
    -0.015625, -0.00390625,-0.000976562,           0, 0.000793457,  0.00117493,  0.00133514,  0.00138474,  0.00136614,  0.00130868,
   0.00123066,  0.00114292,  0.00105218, 0.000962528, 0.000876404, 0.000795173, 0.000719521, 0.000649703, 0.000585698, 0.000527314,
 </pre>
@@ -475,14 +497,22 @@ Is it possible to prove that it can only decrease for a finite amount of times b
 Let's take a look at a diagonal line that's further away. Here are the differences of the elements on the 10th diagonal:
 odd layers:
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
            0,-0.000488281,-0.000488281,-0.000366211,-0.000267029,-0.000171661,-9.20296e-05, -3.0756e-05,   1.508e-05, 4.81904e-05,
  7.11586e-05, 8.62759e-05, 9.54153e-05, 0.000100072, 0.000101421, 0.000100375,  9.7634e-05, 9.37348e-05,  8.9083e-05, 8.39835e-05,
 </pre>
 <pre>
 even layers:
 </pre>
+<<<<<<< HEAD
 <pre style="max-width:100%;whit-space:pre;">
+=======
+<pre style="max-width:100%">
+>>>>>>> 5d6f4dac095c89cef83ec243193b8b26167923e7
            0,-0.000366211,-0.000427246,-0.000335693,-0.000244141,-0.000161171,-9.08375e-05,-3.57032e-05, 5.90086e-06, 3.63067e-05,
   5.7715e-05, 7.20862e-05, 8.10546e-05, 8.59372e-05, 8.77771e-05, 8.73906e-05, 8.54098e-05, 8.23208e-05, 7.84945e-05, 7.42116e-05,
 </pre>
