@@ -349,6 +349,8 @@ And the pattern continues. The coefficients goes like this:
         1  3   6   10  12  12  10  6   3   1
     1   4  10  20  31  40  44  40  31  20  10  4  1
 (more rows up to the 11th:
+</pre>
+<pre style="max-width:100%">
 1,5,15,35,65,101,135,155,155,135,101,65,35,15,5,1,
 1,6,21,56,120,216,336,456,546,580,546,456,336,216,120,56,21,6,1,
 1,7,28,84,203,413,728,1128,1554,1918,2128,2128,1918,1554,1128,728,413,203,84,28,7,1,
@@ -356,7 +358,8 @@ And the pattern continues. The coefficients goes like this:
 1,9,45,165,486,1206,2598,4950,8451,13051,18351,23607,27876,30276,30276,27876,23607,18351,13051,8451,4950,2598,1206,486,165,45,9,1,
 1,10,55,220,705,1902,4455,9240,17205,29050,44803,63460,82885,100110,112035,116304,112035,100110,82885,63460,44803,29050,17205,9240,4455,1902,705,220,55,10,1,
 1,11,66,286,990,2882,7282,16302,32802,59950,100298,154518,220198,291258,358490,411334,440484,440484,411334,358490,291258,220198,154518,100298,59950,32802,16302,7282,2882,990,286,66,11,1,)
-
+</pre>
+<pre>
 On each row, each number is the sum of 4 numbers of the previous row: 2 position to the left of the one above it, 1 position to the left, directly above it, and one to the right, and if it goes out of the boundary, it's considered 0.
 Over all, there's an extra coefficient of $\frac{1}{4^t}$ to normalize the probability to one.
 Each row has one more element on the left and two more on the right. The vertical line in our figure corresponds to the vertical line of {1,3,10,31...}. If we take the 4th layer of the even cells (coordinate (8,8) in the table below) as an example, the total probability is
@@ -419,7 +422,8 @@ What else can we do, then? In the previous calculations, we're trying to find an
 
 Let's go back to the grid, maybe.
 The proof would be trivial if all the values increase monotonically along any vertical line. But unfortunately that is not the case. The elements in the top $10 \times 10$ grid are
-
+</pre>
+<pre style="max-width:100%">
      0.625,      0.75,     0.875,         1,         1,         1,         1,         1,         1,         1,
        0.5,     0.625,      0.75,   0.90625,    0.9375,   0.96875,         1,         1,         1,         1,
      0.375,       0.5,   0.65625,    0.8125,     0.875,    0.9375,  0.976562,  0.984375,  0.992188,         1,
@@ -430,43 +434,59 @@ The proof would be trivial if all the values increase monotonically along any ve
     0.0625,  0.140625,      0.25,  0.382812,       0.5,  0.617188,   0.71875,  0.796875,  0.863281,  0.912109,
  0.0390625,  0.109375,  0.203125,    0.3125,  0.429688,  0.546875,  0.652344,  0.742188,  0.817871,   0.87207,
    0.03125, 0.0859375,   0.15625,  0.253906,  0.367188,  0.480469,  0.585938,  0.683594,  0.763672,  0.827637,
-   
+</pre>
+<pre>
 The diagonal line is indeed increasing, but the third diagonal line has elements 0.875, 0.90625, 0.875, 0.890625, 0.890625, 0.902344, 0.900391, 0.912109... which increases and decreases alternately. And that is not the only diagonal line that shows this behavior. Let's take the 5th diagonal line as an example, the first few elements are
-
+</pre>
+<pre style="max-width:100%">
        1,       1,0.984375,0.984375,0.980469,0.980469,0.978516,0.979492,0.978271,0.979492,
 0.979004,0.980286,0.980179,0.981461,0.981567,0.982796, 0.98303, 0.98418,0.984484,0.985547,
 0.985884,0.986855,0.987203,0.988086, 0.98843,0.989229, 0.98956,0.990281,0.990595,0.991244,
 0.991538, 0.99212,0.992393,0.992915,0.993167,0.993635,0.993865,0.994284,0.994495, 0.99487,
 0.995062,0.995397,0.995572,0.995872, 0.99603,0.996298,0.996441,0.996681, 0.99681,0.997024,
-
+</pre>
+<pre>
 It's not easy to tell if it increases or decreases. Let's see their differences:
-
+</pre>
+<pre style="max-width:100%">
            0,   -0.015625,           0, -0.00390625,           0, -0.00195312, 0.000976562,  -0.0012207,   0.0012207,-0.000488281,
   0.00128174,-0.000106812,  0.00128174, 0.000106812,  0.00122833, 0.000234604,  0.00115013, 0.000303984,  0.00106215, 0.000337005,
  0.000971675, 0.000347495, 0.000883162, 0.000343844, 0.000799075, 0.000331543, 0.000720632, 0.000314187,  0.00064834,  0.00029413,
  0.000582274, 0.000272915, 0.000522257, 0.000251551,  0.00046797,  0.00023068, 0.000419023, 0.000210703, 0.000374994, 0.000191853,
-
+</pre>
+<pre>
 It alternates for about 12 times, then it keeps increasing.
 Remembering that there are two independent sets of layers, we should find the differences within each set. The differences within the odd layers are
-
+</pre>
+<pre style="max-width:100%">
    -0.015625, -0.00390625, -0.00195312,-0.000244141, 0.000732422,  0.00117493,  0.00138855,  0.00146294,  0.00145411,  0.00139916,
   0.00131917,  0.00122701,  0.00113062,  0.00103482,  0.00094247,  0.00085519, 0.000773808, 0.000698651, 0.000629726, 0.000566848,
-  
+</pre>
+<pre>
 and the even layers
-
+</pre>
+<pre style="max-width:100%">
    -0.015625, -0.00390625,-0.000976562,           0, 0.000793457,  0.00117493,  0.00133514,  0.00138474,  0.00136614,  0.00130868,
   0.00123066,  0.00114292,  0.00105218, 0.000962528, 0.000876404, 0.000795173, 0.000719521, 0.000649703, 0.000585698, 0.000527314,
-
+</pre>
+<pre>
 Now they no longer alternate.
 Is it possible to prove that it can only decrease for a finite amount of times before it starts to increase monotonically?
 Let's take a look at a diagonal line that's further away. Here are the differences of the elements on the 10th diagonal:
 odd layers:
+</pre>
+<pre style="max-width:100%">
            0,-0.000488281,-0.000488281,-0.000366211,-0.000267029,-0.000171661,-9.20296e-05, -3.0756e-05,   1.508e-05, 4.81904e-05,
  7.11586e-05, 8.62759e-05, 9.54153e-05, 0.000100072, 0.000101421, 0.000100375,  9.7634e-05, 9.37348e-05,  8.9083e-05, 8.39835e-05,
+</pre>
+<pre>
 even layers:
+</pre>
+<pre style="max-width:100%">
            0,-0.000366211,-0.000427246,-0.000335693,-0.000244141,-0.000161171,-9.08375e-05,-3.57032e-05, 5.90086e-06, 3.63067e-05,
   5.7715e-05, 7.20862e-05, 8.10546e-05, 8.59372e-05, 8.77771e-05, 8.73906e-05, 8.54098e-05, 8.23208e-05, 7.84945e-05, 7.42116e-05,
-
+</pre>
+<pre>
 It seems that the further away from the middle, the more times it would decrease.
 
 Let's see if we can find out more about this pattern! In the following two figures (first the odd layers, second the even layers), a cell $(m,n)$ is a black square if $p(m,n)-p(m-2,n-2)$ is negative, a white square if positive, and a dash if zero.
