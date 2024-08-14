@@ -1,0 +1,147 @@
+---
+title: Leetcode M1140 Stone Game II - Push it to the limit
+date: 2023-05-26
+---
+<script src="https://yjian012.github.io/Yi-blog/scripts.js"></script>
+<link rel="stylesheet" href="https://yjian012.github.io/Yi-blog/styles.css">
+<pre>
+M1140 description:
+  Alice and Bob continue their games with piles of stones.  There are a number of piles arranged in a row, and each pile has a positive integer number of stones piles[i].  The objective of the game is to end with the most stones. 
+  Alice and Bob take turns, with Alice starting first.  Initially, M = 1.
+  On each player's turn, that player can take all the stones in the first X remaining piles, where 1 <= X <= 2M.  Then, we set M = max(M, X).
+  The game continues until all the stones have been taken.
+  Assuming Alice and Bob play optimally, return the maximum number of stones Alice can get.
+
+Example 1:
+  Input: piles = [2,7,9,4,4]
+  Output: 10
+  Explanation:  If Alice takes one pile at the beginning, Bob takes two piles, then Alice takes 2 piles again. Alice can get 2 + 4 + 4 = 10 piles in total. If Alice takes two piles at the beginning, then Bob can take all three piles left. In this case, Alice get 2 + 7 = 9 piles in total. So we return 10 since it's larger. 
+Example 2:
+  Input: piles = [1,2,3,4,5,100]
+  Output: 104
+
+Constraints:
+  $1 <= piles.length <= 100$
+  $1 <= piles[i] <= 10^4$
+</pre>
+
+The problem is not trivial, so we most likely need to iterate through all possibilities. But there are a lot of sub-problems that we will encounter over and over again, so we should record the intermediate results. We can keep a table as the maximum points that a player can get at an index $i$ and given the current $M$. Considering the two approaches in DP, the top-down recursive approach is probably easier to write, since it's not easy to tell what the range of $M$ is if we use the bottom-up approach. But bottom-up is usually a little faster, so let's take the challenge. 
+
+```cpp
+#pragma GCC optimize("Ofast","inline","-ffast-math")
+#pragma GCC target("avx,mmx,sse2,sse3,sse4")
+class Solution {
+    int tab[100][49];
+    int v[100];
+    void generate(){
+        memset(v,0,sizeof(v));
+        v[0]=1;
+        for(int i=0;i<100;++i){
+            int x=1;
+            for(;x<=v[i];++x){
+                if(i+x>=100) break;
+                v[i+x]=max(v[i+x],v[i]);
+            }
+            for(;x<=2*v[i];++x){
+                if(i+x>=100) break;
+                v[i+x]=max(v[i+x],x);
+            }
+        }
+    }
+public:
+    Solution(){
+        generate();
+        for(int i=0;i<100;++i){
+            tab[i][48]=v[i];
+        }
+    }
+    int stoneGameII(const vector<int>& piles) {
+        static auto _=[](){ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);return 0;}();
+        const int sz=piles.size();
+        int sum=0;
+        for(int i=sz-1;i>=0;--i){
+            sum+=piles[i];
+            for(int j=0;j<tab[i][48];++j){
+                int canTake=2*(j+1);
+                if(canTake>=sz-i){
+                    tab[i][j]=sum; continue;
+                }
+                int minE=INT_MAX;
+                for(int x=1;x<=j+1;++x){
+                    minE=min(minE,tab[i+x][j]);
+                }
+                for(int x=j+2;x<=canTake;++x){
+                    if(tab[i+x][48]<x) continue;
+                    minE=min(minE,tab[i+x][x-1]);
+                }
+                tab[i][j]=sum-minE;
+            }
+        }
+        return tab[0][0];
+    }
+};
+```
+The code above has Runtime 3 ms Beats 100% and Memory 8.3 MB Beats 91.12%, and the "Sample 5 ms submission" now takes 16ms. It breaks the record and I think it is pretty much optimized.
+
+You may wonder where does the magic number "49" come from. Well, I ran the "generate" function and got the ranges of $M$ at each index from 0 to 99, and the largest is 48. Since I use index $j$ to represent $M-1$, I use the index 48 to store the range of $M-1$. If we want to have a more flexible way to write it, we could write
+```cpp
+static const int maxSize=100;
+static const int mRange=(maxSize+1)/2;
+//...
+int tab[maxSize][mRange];
+```
+because the range of $M$ satisfies $v[n]<=(n+2)/2$. The proof is left as an exercise.
+
+The code above can be easily modified to work as a C function,
+```c
+#define min(a,b) ((a)<(b)?(a):(b))
+#define max(a,b) ((a)>(b)?(a):(b))
+int tab[100][49];
+int v[100];
+bool first=true;
+void generate(){
+    memset(v,0,sizeof(v));
+    v[0]=1;
+    for(int i=0;i<100;++i){
+        int x=1;
+        for(;x<=v[i];++x){
+            if(i+x>=100) break;
+            v[i+x]=max(v[i+x],v[i]);
+        }
+        for(;x<=2*v[i];++x){
+            if(i+x>=100) break;
+            v[i+x]=max(v[i+x],x);
+        }
+    }
+}
+int stoneGameII(int* piles,const int sz){
+    if(first){
+        generate();
+        for(int i=0;i<100;++i){
+            tab[i][48]=v[i];
+        }
+        first=false;
+    }
+    int sum=0;
+    for(int i=sz-1;i>=0;--i){
+        sum+=piles[i];
+        for(int j=0;j<tab[i][48];++j){
+            int canTake=2*(j+1);
+            if(canTake>=sz-i){
+                tab[i][j]=sum; continue;
+            }
+            int minE=INT_MAX;
+            for(int x=1;x<=j+1;++x){
+                minE=min(minE,tab[i+x][j]);
+            }
+            for(int x=j+2;x<=canTake;++x){
+                if(tab[i+x][48]<x) continue;
+                minE=min(minE,tab[i+x][x-1]);
+            }
+            tab[i][j]=sum-minE;
+        }
+    }
+    return tab[0][0];
+}
+```
+Runtime 0 ms Beats 100%, Memory 5.9 MB Beats 85.71%.
