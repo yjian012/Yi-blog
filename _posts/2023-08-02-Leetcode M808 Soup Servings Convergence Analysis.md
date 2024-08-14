@@ -3,9 +3,9 @@ title: Leetcode M808 Soup Servings Convergence Analysis
 date: 2023-08-02
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js' type='text/javascript'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.2/showdown.min.js' type='text/javascript'/>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css' id='markdown' rel='stylesheet'/>  
 <script>
     function loadScript(src){
@@ -471,8 +471,8 @@ It seems that the further away from the middle, the more times it would decrease
 
 Let's see if we can find out more about this pattern! In the following two figures (first the odd layers, second the even layers), a cell $(m,n)$ is a black square if $p(m,n)-p(m-2,n-2)$ is negative, a white square if positive, and a dash if zero.
 </pre>
-![image](M808. Soup Servings diagonal decrease odd layers.PNG)
-![image](M808. Soup Servings diagonal decrease even layers.PNG)
+![image](/Yi-blog/img/M808. Soup Servings diagonal decrease odd layers.PNG)
+![image](/Yi-blog/img/M808. Soup Servings diagonal decrease even layers.PNG)
 <pre>
 There is definitely a pattern here. The boundary between increasing cells and decreasing cells shifts further and further away from the middle diagonal line. If this can be proved, then it's obvious that the diagonal line doesn't have decreasing cells. But I haven't found a proof of that.
 
@@ -480,7 +480,7 @@ How about we consider something more solid - something that we can actually prov
 If we look at the table again, it's easy to see that the values increase rightward and decrease downward. Can we do better than that?
 It's easy to see that the number on the left boundary decrease to $1/4$ of the value 4 steps (or 1 layer) above it. We can also tell that there are more and more 1s on the right boundary. Let's mark them on the figure:
 </pre>
-![image](M808. Soup Servings graph4.png)
+![image](/Yi-blog/img/M808. Soup Servings graph4.png)
 <pre>
 The value of the light green cell is 1/4 of the green cell, whose value is 1/4 of the deep green cell.
 With the same reasoning, we can tell that there's a similar pattern on the right boundary. There is one more cell of value 1 after each layer, and also the value of the cell next to the 1 (the blue cells) increases monotonically downward. The difference between 1 and the value of the blue cell is 1/4 of the difference between 1 and the light blue cell, and the difference between 1 and and the deep blue cell is 1/4 of the previous one. So the value of the cells along this line converges to 1. By induction, it's easy to show that any cell increases value along that line downward.
