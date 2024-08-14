@@ -20,6 +20,7 @@ date: 2023-08-02
     loadScript(&quot;https://yjian012.github.io/Yi-blog/js/markdown-highlight-in-blogger.js&quot;).then(script=&gt;loadScript(&quot;https://yjian012.github.io/Yi-blog/js/scripts.js&quot;));
   //https://mxp22.surge.sh/markdown-highlight-in-blogger.js
 </script>
+
 <pre>M808 description:
 <blockquote>
   There are two types of soup: type A and type B. Initially, we have $n$ ml of each type of soup. There are four kinds of operations:
