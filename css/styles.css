@@ -5,3 +5,10 @@ pre{
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-break: keep-all;
 }
+.wrapper {
+ max-width:100% !important;
+ margin-right:auto;
+ margin-left:auto;
+ padding-right:30px;
+ padding-left:30px
+}
