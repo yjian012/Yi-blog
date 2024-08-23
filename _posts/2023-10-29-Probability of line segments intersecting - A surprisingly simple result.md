@@ -39,9 +39,9 @@ To find the probability, we can just integrate the probability that the second l
 
 The area outside the stadium has zero probability density. Due to the symmetry of the shape, we only need to consider a quarter of the stadium, and multiply the answer by 4.
 The situations are different depending on which part of the stadium shape the first end point is in. We can put them in 4 parts:
-
+</pre>
 ![image](/Yi-blog/img/Probability that two line segments intersect.png)
-
+<pre>
 (Actually, $P_1$ and $P_3$ can be combined in the calculations in polar coordinates. I started with Cartesian, so I didn't notice until later.)
 
 The probability is $p=\frac{1}{A}\times 4\times\frac{1}{2\pi}(p_1+p_2+p_3+p_4)$, where

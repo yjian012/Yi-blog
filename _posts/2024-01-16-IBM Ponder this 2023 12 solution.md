@@ -26,7 +26,7 @@ Problem description is <a href="https://research.ibm.com/haifa/ponderthis/challe
 
 When I saw this problem, the first thing that came to my mind is, to find a proper coordinate system. It's natural to consider the following coordinate system:
 </pre>
-![image](coor.png)
+![image](/Yi-blog/img/coor.png)
 <pre>
 where $x$ and $y$ axis make $60^\circ$. The distance from a point at $(i,j)$ to the origin is, $d=\sqrt{i^2+j^2-2ij\cos(120^\circ)}=\sqrt{i^2+j^2+ij}$.
 Next, considering the symmetry, we only need to consider the points that's within $30^\circ$ to $x$ axis, or equavalently, from $30^\circ$ to $60^\circ$, i.e. $j\geq i$.
@@ -95,7 +95,7 @@ So, this supports the justification to start from 4305000 and end at 4320000, si
 
 I made a histogram of counts in the range from "First over" to "Last under" and fit it to a normal distribution:
 </pre>
-![image](fit gaussian.png)
+![image](/Yi-blog/img/fit gaussian.png)
 <pre>
 It looks close but there're definitely visible discrepancies. The sudden decrease near the boundary may be due to the cut-off, since if I extend the boundary, there will be more numbers filling in. So it's probably better to exclude the numbers that are close to the boundary. But even without them, the fit is still kind of off. I wonder what kind of distribution it is...
 </pre>
