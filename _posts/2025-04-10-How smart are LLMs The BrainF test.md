@@ -27,12 +27,12 @@ Today, I thought, "What if I ask the LLMs this question? How well will they perf
 
 ChatGPT quickly gave the following answer:
 </pre>
-<blockquote>Here is a Brainfuck program that outputs the word "Brainfuck":
+Here is a Brainfuck program that outputs the word "Brainfuck":
 ```brainfuck
 ++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<<<.+++.------.--------.>>+.>++.
 
 ```
-This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.</blockquote>
+This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.
 <pre>
 But when I tested this program, the output is Hello HKE=Y". So, apparently it just copied a "Hello World" program, maybe from wikipedia, then messed it up with its "optimizations". Kind of expected.
   
@@ -46,7 +46,7 @@ Then it thought about how to make it shorter. This time it came up with this sol
 This solution still gives the correct output. The length is 131 characters, but deepseek still skipped those characters and said that the length is also 108 characters. And it considered this to be optimal.
 Here's its final answer:
 </pre>
-<blockquote>To output the word "Brainfuck" in Brainfuck with minimal code length, we can optimize by using loops to generate ASCII values efficiently. Here's the shortest solution:
+To output the word "Brainfuck" in Brainfuck with minimal code length, we can optimize by using loops to generate ASCII values efficiently. Here's the shortest solution:
 ```brainfuck
 ++++++[>+++++++++++<-]>.<++++++[>++++++++<-]>.<++[>--------<-]>-.++++++++.+++++.--------.<+++[>+++++<-]>.<+++[>------<-]>.++++++++.
 ```
@@ -78,7 +78,7 @@ Here's its final answer:
 9. **k (107):** 
    - `++++++++.`
    - Add 8 to cell1 (99+8=107) and print.
-This approach efficiently uses loops and pointer navigation to minimize the number of commands, resulting in the shortest possible Brainfuck program to output "Brainfuck".</blockquote>
+This approach efficiently uses loops and pointer navigation to minimize the number of commands, resulting in the shortest possible Brainfuck program to output "Brainfuck".
 <pre>
 Comparing the results:
   Human designer (me): length=95
