@@ -38,7 +38,7 @@ ChatGPT quickly gave the following answer:
 > 
 > This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.
 
-But when I tested this program, the output is Hello HKE=Y". So, apparently it just copied a "Hello World" program, maybe from wikipedia, then messed it up with its "optimizations". Kind of expected.
+But when I tested this program, the output is "Hello HKE=Y"". So, apparently it just copied a "Hello World" program, maybe from wikipedia, then messed it up with its "optimizations". Kind of expected.
   
 Deepseek thought for about a minute, then it stopped thinking. I clicked "continue thinking", then it started to output its thoughts.
 It's pretty long, so I'll omit its thought process. After 495 seconds, it gave me an answer.
