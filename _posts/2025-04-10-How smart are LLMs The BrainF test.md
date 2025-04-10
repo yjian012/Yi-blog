@@ -34,7 +34,7 @@ ChatGPT quickly gave the following answer:
 >
 > ```brainfuck
 >　++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<<<.+++.------.--------.>>+.>++.
->　```
+> ```
 > 
 > This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.
 
