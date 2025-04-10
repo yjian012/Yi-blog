@@ -26,14 +26,13 @@ After thinking about it for a while, I came up with a program that contains only
 Today, I thought, "What if I ask the LLMs this question? How well will they perform?" The following is the answer from ChatGPT and deepseek, given the prompt "write a brainfuck program that outputs the word "Brainfuck", make it as short as possible."
 
 ChatGPT quickly gave the following answer:
-<blockquote>
-Here is a Brainfuck program that outputs the word "Brainfuck":
-```brainfuck
-++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<<<.+++.------.--------.>>+.>++.
-
-```
-This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.
-</blockquote>
+> 
+> Here is a Brainfuck program that outputs the word "Brainfuck":
+> ```brainfuck
+>　++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<<<.+++.------.--------.>>+.>++.
+>　```
+> This program is optimized to output "Brainfuck" using a combination of loops and efficient value increments.
+> 
 But when I tested this program, the output is Hello HKE=Y". So, apparently it just copied a "Hello World" program, maybe from wikipedia, then messed it up with its "optimizations". Kind of expected.
   
 Deepseek thought for about a minute, then it stopped thinking. I clicked "continue thinking", then it started to output its thoughts.
@@ -45,41 +44,42 @@ Then it thought about how to make it shorter. This time it came up with this sol
 ++++++[>+++++++++++<-]>.<++++++[>++++++++<-]>.<++[>--------<-]>-.++++++++.+++++.--------.<+++[>+++++<-]>.<+++[>------<-]>.++++++++.
 This solution still gives the correct output. The length is 131 characters, but deepseek still skipped those characters and said that the length is also 108 characters. And it considered this to be optimal.
 Here's its final answer:
-<blockquote>
-To output the word "Brainfuck" in Brainfuck with minimal code length, we can optimize by using loops to generate ASCII values efficiently. Here's the shortest solution:
-```brainfuck
-++++++[>+++++++++++<-]>.<++++++[>++++++++<-]>.<++[>--------<-]>-.++++++++.+++++.--------.<+++[>+++++<-]>.<+++[>------<-]>.++++++++.
-```
-**Explanation:**
-1. **B (66):** 
-   - `++++++[>+++++++++++<-]>.`
-   - Initialize cell0 to 6, loop to add 11 six times (6*11=66), then print.
-2. **r (114):** 
-   - `<++++++[>++++++++<-]>.`
-   - Move left to cell0 (now 0), set to 6, loop to add 8 six times (48) to cell1 (66+48=114), then print.
-3. **a (97):** 
-   - `<++[>--------<-]>-.`
-   - Move left to cell0 (0), set to 2, loop to subtract 8 twice (16) from cell1 (114-16=98), subtract 1 more (97), then print.
-4. **i (105):** 
-   - `++++++++.`
-   - Add 8 to cell1 (97+8=105) and print.
-5. **n (110):** 
-   - `+++++.`
-   - Add 5 to cell1 (105+5=110) and print.
-6. **f (102):** 
-   - `--------.`
-   - Subtract 8 from cell1 (110-8=102) and print.
-7. **u (117):** 
-   - `<+++[>+++++<-]>.`
-   - Move left to cell0 (0), set to 3, loop to add 5 three times (15) to cell1 (102+15=117), then print.
-8. **c (99):** 
-   - `<+++[>------<-]>.`
-   - Move left to cell0 (0), set to 3, loop to subtract 6 three times (18) from cell1 (117-18=99), then print.
-9. **k (107):** 
-   - `++++++++.`
-   - Add 8 to cell1 (99+8=107) and print.
-This approach efficiently uses loops and pointer navigation to minimize the number of commands, resulting in the shortest possible Brainfuck program to output "Brainfuck".
-</blockquote>
+
+> 
+>　To output the word "Brainfuck" in Brainfuck with minimal code length, we can optimize by using loops to generate ASCII values efficiently. Here's the shortest solution:
+>　```brainfuck
+＞　++++++[>+++++++++++<-]>.<++++++[>++++++++<-]>.<++[>--------<-]>-.++++++++.+++++.--------.<+++[>+++++<-]>.<+++[>------<-]>.++++++++.
+>　```
+>　**Explanation:**
+>　1. **B (66):** 
+>　   - `++++++[>+++++++++++<-]>.`
+>　   - Initialize cell0 to 6, loop to add 11 six times (6*11=66), then print.
+>　2. **r (114):** 
+>　   - `<++++++[>++++++++<-]>.`
+>　   - Move left to cell0 (now 0), set to 6, loop to add 8 six times (48) to cell1 (66+48=114), then print.
+>　3. **a (97):** 
+>　   - `<++[>--------<-]>-.`
+>　   - Move left to cell0 (0), set to 2, loop to subtract 8 twice (16) from cell1 (114-16=98), subtract 1 more (97), then print.
+>　4. **i (105):** 
+>　   - `++++++++.`
+>　   - Add 8 to cell1 (97+8=105) and print.
+>　5. **n (110):** 
+>　   - `+++++.`
+>　   - Add 5 to cell1 (105+5=110) and print.
+>　6. **f (102):** 
+>　   - `--------.`
+>　   - Subtract 8 from cell1 (110-8=102) and print.
+>　7. **u (117):** 
+>　   - `<+++[>+++++<-]>.`
+>　   - Move left to cell0 (0), set to 3, loop to add 5 three times (15) to cell1 (102+15=117), then print.
+>　8. **c (99):** 
+>　　  - `<+++[>------<-]>.`
+>　   - Move left to cell0 (0), set to 3, loop to subtract 6 three times (18) from cell1 (117-18=99), then print.
+>　9. **k (107):** 
+>　   - `++++++++.`
+>　   - Add 8 to cell1 (99+8=107) and print.
+>　This approach efficiently uses loops and pointer navigation to minimize the number of commands, resulting in the shortest possible Brainfuck program to output "Brainfuck".
+>　
 Comparing the results:
   Human designer (me): length=95
   Human created program: length=107
