@@ -1,5 +1,5 @@
 ---
-title: A Recursive Geometric Proof for 1962 IMO Problem 6
+title: A Recursive Geometric Proof of 1962 IMO Problem 6
 date: 2024-12-29
 ---
 <link rel="stylesheet" href="/Yi-blog/css/styles.css">
