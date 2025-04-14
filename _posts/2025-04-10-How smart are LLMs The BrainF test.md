@@ -22,7 +22,7 @@ date: 2025-04-10
 </script>
 A few days ago I was thinking, "How smart are LLMs?" It's well known that LLMs are very knowledgeable - You ask them anything, and they will spit out a summarization of human knowledge on that topic. But there's hardly any creativity. So, to test how smart they are, I should find a question that not many people has asked or answered before.
 
-Later, I remembered an interesting problem that I tried before. That was when I first heard of the "Brainfuck" programming language. It's a Turing Complete language with only eight commands. Programming in that language is not easy. The problem is, "What's the shortest Brainfuck program that outputs the word 'Brainfuck'?"
+Later, I remembered an interesting question that I tried to answer before. That was when I first heard of the "Brainfuck" programming language. It's a Turing Complete language with only eight commands. Programming in that language is not easy. The problem is, "What's the shortest Brainfuck program that outputs the word 'Brainfuck'?"
 
 After thinking about it for a while, I came up with a program that contains only 94 characters. Later, I found <a href="https://copy.sh/brainfuck/text.html">this webpage</a> which generates brainfuck programs that output the given text. The program that this page generates is 107 characters long - impressive for a general solver, although not optimal.
 
