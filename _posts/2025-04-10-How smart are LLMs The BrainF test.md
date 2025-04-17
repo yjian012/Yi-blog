@@ -24,7 +24,7 @@ A few days ago I was thinking, "How smart are LLMs?" It's well known that LLMs a
 
 Later, I remembered an interesting question that I tried to answer before. That was when I first heard of the "Brainfuck" programming language. It's a Turing Complete language with only eight commands. Programming in that language is not easy. The problem is, "What's the shortest Brainfuck program that outputs the word 'Brainfuck'?"
 
-After thinking about it for a while, I came up with a program that contains only 94 characters. Later, I found <a href="https://copy.sh/brainfuck/text.html">this webpage</a> which generates brainfuck programs that output the given text. The program that this page generates is 107 characters long - impressive for a general solver, although not optimal.
+After thinking about it for a while, I came up with a program that contains only 94 characters. Later, I found <a href="https://copy.sh/brainfuck/text.html">this webpage</a> which generates brainfuck programs that output the given text. The program that this page generates is 107 characters long - impressive for a general solver, although not optimal. And it only works with 8 bit cells, while my program works with any cell size at least 8 bit.
 
 Today, I thought, "What if I ask the LLMs this question? How well will they perform?" The following is the answer from ChatGPT and deepseek, given the prompt "write a brainfuck program that outputs the word "Brainfuck", make it as short as possible."
 
@@ -103,7 +103,7 @@ Here's its final answer:
 
 Comparing the results:
 -  Human designer (me): length=94
--  Human created program: length=107
+-  Human created program: length=107 (only works with 8 bit cells)
 -  ChatGPT: wrong answer
 -  Deepseek: length=131
 
