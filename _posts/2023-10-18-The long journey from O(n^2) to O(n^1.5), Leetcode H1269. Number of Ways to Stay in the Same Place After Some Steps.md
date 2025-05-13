@@ -291,7 +291,10 @@ Then, what are the $m$s? Since the power can be at most $s$, and $m$ must be a m
 
 This algorithm has complexity $O(steps*max(steps/arrLen,1))$. Interestingly, one would expect the complexity to grow with $arrLen$, but with this algorithm it's the opposite. When $arrLen>steps$, the old algorithm at the beginning takes $O(steps^2)$ while this one takes $O(steps)$! If we combine this algorithm and the old algorithm which has complexity $O(steps*min(steps,arrLen))$, i.e., we use the new algorithm for large $arrLen$ and the old one for small $arrLen$, we get an $O(step^{1.5})$ algorithm! We choose the new one if $arrLen>\sqrt{steps}$ and the old one otherwise.
 
-(Building the binomial table has complexity $O(n^2)$ but it is not included in the complexity, since it only needs to be built once. For multiple requests the amortized complexity can be arbitrarily low. Explictly, if the function is called $k$ times, while the maximum of the number of steps is $N$, then the amortized complexity is $\frac{N^2}{k}$. If $k\geq \sqrt N$, the amortized comlexity is still $O(N^{1.5})$.)
+(Building the binomial table has complexity $O(n^2)$ but it is not included in the complexity, since it only needs to be built once. For multiple requests the amortized complexity can be arbitrarily low. Explictly, if the function is called $k$ times, while the maximum of the number of steps is $N$, then the amortized complexity is $\frac{N^2}{k}$. If $k\geq \sqrt N$, the amortized comlexity is still $O(N^{1.5})$.
+
+On the other hand, one could use a factorial and inverse of factorial table instead, which can be built in $O(N)$, and $\binom{a}{b}$ can be calculated as $a!(b!)^{-1}(a-b)!^{-1}$, at the cost of 2 extra mulitplication operations on each call to "binom". But this makes it exactly $O(N^{1.5})$.
+)
 
 The following code implements this algorithm:
 </pre>
