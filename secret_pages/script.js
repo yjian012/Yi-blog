@@ -1,6 +1,6 @@
 /*Written by Yi Jiang, Aug 2021. All rights reserved.*/
-const sidelength=10;//20;
-const initx=4,inity=4;//initx=0,inity=0;
+var sidelength=10;//20;
+var initx=4,inity=4;//initx=0,inity=0;
 var path="";
 var x=initx,y=inity;
 var colorBefore="";//either R or W, for undo purpose
@@ -12,9 +12,33 @@ const dirmp=[[0,-1],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1]];
 (function() {
     keyNav();
 })();
+function init1(){
+	sidelength=20;
+	initx=0,inity=0;
+}
+function init2(){
+	sidelength=10;
+	initx=4,inity=4;
+}
+function init(){
+	path="";
+	x=initx,y=inity;
+	colorBefore="";
+	witheCount=sidelength*sidelength-1;
+	document.getElementById("key"+x+"_"+y).classList.remove("keyPlayer");
+	for(let i=0;i<sidelength;++i){
+		for(let j=0;j<sidelength;++j){
+			key=document.getElementById("key"+i+"_"+j);
+			key.classList.remove("keyForb");
+			key.classList.remove("keyVis");
+			key.classList.add("keyEmpty");
+		}
+	}
+	document.getElementById("key"+x+"_"+y).classList.add("keyPlayer");
+}
 	function checkWin(){
-		document.getElementById("whiteCount").innerText="White cells left: "+whiteCount;
-		/*if(whiteCount==0)*/ document.getElementById("solution").innerText="Current path: "+path;
+		document.getElementById("whiteCount").innerText="剩余白色方格数量: "+whiteCount;
+		/*if(whiteCount==0)*/ document.getElementById("solution").innerText="当前路径: "+path;
 		//document.getElementById("colorBefore").innerText=colorBefore;//to comment out
 	}
 	function move(dx,dy){
@@ -77,19 +101,6 @@ const dirmp=[[0,-1],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1]];
 		//checkWin();//to comment out
 	}
 	function runInput(){
-		document.getElementById("key"+x+"_"+y).classList.remove("keyPlayer");
-		for(let i=0;i<sidelength;++i){
-			for(let j=0;j<sidelength;++j){
-				key=document.getElementById("key"+i+"_"+j);
-				key.classList.remove("keyForb");
-				key.classList.remove("keyVis");
-				key.classList.add("keyEmpty");
-			}
-		}
-		x=initx,y=inity;
-		document.getElementById("key"+x+"_"+y).classList.add("keyPlayer");
-		whiteCount=sidelength*sidelength-1;
-		
 		let inputPath=document.getElementById('pathInput').value;
 		for(let i=0;i<inputPath.length;++i){
 			let num=inputPath.charCodeAt(i)-"A".charCodeAt(0);
