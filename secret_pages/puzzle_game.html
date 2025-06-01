@@ -77,6 +77,7 @@
 <lo>2.	沿跳跃方向的 <b>再下一个方格</b> (如果存在的话) 可以是白色或红色，但不能是蓝色。如果已经到边界了，没有下一个方格，则这条可以忽略。 </lo>
 </ul>
 <p>当跳跃完成后，青蛙所在的位置变成绿色，而之前的位置则变为蓝色。除此之外，沿跳跃方向的再下一个方格（如果存在的话）则变为红色。<br/>
+<br/>
 游戏目标：<br/>
 	你的目标是，让整个棋盘只剩下绿色、蓝色或红色的方格，而不能有白色的。
 </p>
@@ -620,10 +621,10 @@
 </table>
 <div>
 <p>
-Path input: <textarea id="pathInput"></textarea>
+输入路径（只允许A-H之内的字符）： <textarea id="pathInput"></textarea>
 </p>
 <button onclick="runInput()">
-Run input
+测试路径
 </button>
 </div>
 </body>
