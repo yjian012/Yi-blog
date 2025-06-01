@@ -15,10 +15,12 @@ const dirmp=[[0,-1],[-1,-1],[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1]];
 function init1(){
 	sidelength=20;
 	initx=0,inity=0;
+	init();
 }
 function init2(){
 	sidelength=10;
 	initx=4,inity=4;
+	init();
 }
 function init(){
 	path="";
@@ -101,6 +103,7 @@ function init(){
 		//checkWin();//to comment out
 	}
 	function runInput(){
+		init();
 		let inputPath=document.getElementById('pathInput').value;
 		for(let i=0;i<inputPath.length;++i){
 			let num=inputPath.charCodeAt(i)-"A".charCodeAt(0);
