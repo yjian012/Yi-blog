@@ -24,10 +24,10 @@ function init2(){
 }
 function init(){
 	path="";
+	document.getElementById("key"+x+"_"+y).classList.remove("keyPlayer");
 	x=initx,y=inity;
 	colorBefore="";
 	witheCount=sidelength*sidelength-1;
-	document.getElementById("key"+x+"_"+y).classList.remove("keyPlayer");
 	for(let i=0;i<sidelength;++i){
 		for(let j=0;j<sidelength;++j){
 			key=document.getElementById("key"+i+"_"+j);
