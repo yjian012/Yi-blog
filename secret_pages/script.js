@@ -27,7 +27,7 @@ function init(){
 	document.getElementById("key"+x+"_"+y).classList.remove("keyPlayer");
 	x=initx,y=inity;
 	colorBefore="";
-	witheCount=sidelength*sidelength-1;
+	whiteCount=sidelength*sidelength-1;
 	for(let i=0;i<sidelength;++i){
 		for(let j=0;j<sidelength;++j){
 			key=document.getElementById("key"+i+"_"+j);
