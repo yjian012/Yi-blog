@@ -1,6 +1,6 @@
 /*Written by Yi Jiang, Aug 2021. All rights reserved.*/
-var sidelength=10;//20;
-var initx=4,inity=4;//initx=0,inity=0;
+var sidelength=20;//10;
+var initx=0,inity=0;//initx=4,inity=4;
 var path="";
 var x=initx,y=inity;
 var colorBefore="";//either R or W, for undo purpose
