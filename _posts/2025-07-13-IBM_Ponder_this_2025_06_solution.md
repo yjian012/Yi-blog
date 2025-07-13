@@ -618,6 +618,16 @@ Input path (only characters 'A'-'H' are allowed): <textarea id="pathInput"></tex
 Test path
 </button>
   <br/>
+  <p> My solutions are
+	  <br/>
+CHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCHCHADACECBCEFGDFCFCFCFCFCFCFCFCFCFCFCFCFCFCFEBECABEDADADADADADADADADADADADCHCAGHCBGBGBGBGBGBGBGBGBGBGBGBGBGBGBAFAGEFAHEHEHEHEHEHEHEHGFCFCFCFCFCFCFCFCFCFCFCFCFCFEBEBEDADADADADADCHCHCBGBGBGBGBGBGBGBGBAFAHEHEHEHEHGDGECDGFCFCFCFCFEDADADACAHBGBGBHC
+	  <br/>
+to the main problem, and
+	  <br/>
+	 EGFGFECBCECBADEBDCHCAHBGFGAHEHFGFGABCHGBHADACDEBADEDBHADACDEFDGH
+	  <br/>
+to the bonus problem.
+  </p>
   <p>
     I've been quite busy lately, so I'll stop solving the PonderThis puzzles for a while. Don't know when I'll resume, anyway, good luck to the other challengers! Cheers!
   </p>
