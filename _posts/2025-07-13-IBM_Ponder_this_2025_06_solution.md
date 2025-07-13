@@ -2,69 +2,11 @@
 title: IBM Ponder this 2025 06 solution
 date: 2025-07-13
 ---
-<style>
-.keypad{
-  border: 1px solid black;
-  position: relative;
-}
-.key {
-  border: 1px solid #3333FF;
-  color: white;
-  padding: 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-.keyOff{
-  background-color: #FFFFFF; /* Green */
-}
-.keyOn{
-  background-color: #04AA6D; /* Green */
-}
-.keyEmpty{
-  background-color: #FFFFFF; /* White */
-}
-.keyVis{
-  background-color: #0000FF; /* Blue */
-}
-.keyForb{
-  background-color: #FF0000; /* Red */
-}
-.keyPlayer{
-  background-color: #00FF00; /*Green*/
-}
-#overlay,#overlay_f {
-  position: absolute;
-  display: none;
-  height: 240px;
-  width: 240px;
-  background: rgba(238, 228, 218, 0.5);
-  z-index: 2;
-  cursor: pointer;
-}
-#winText{
-  position: relative;
-  top: 70px;
-  text-align: center;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 60px;
-  text-align: center;
-  color: rgb(180, 120, 120);;
-}
-#failText{
-  position: relative;
-  top: 70px;
-  text-align: center;
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 60px;
-  color: rgb(220, 30, 30);;
-}
-</style>
-<p>
+<script src="/Yi-blog/js/scripts.js"></script>
+<link rel="stylesheet" href="/Yi-blog/css/styles.css">
+<link rel="stylesheet" href="/Yi-blog/css/keypad2.css">
+
+<pre>
 Problem description can be found <a href="https://research.ibm.com/haifa/ponderthis/solutions/June2025.html">here</a>.
 You can play the games below with a standard keyboard.
 Choose main game or bonus game.
@@ -73,7 +15,7 @@ Controls:
   Use numpad keys 1 2 3 4 6 7 8 9 to move the frog in the corresponding directions.
   To make it easier to solve, you can use key 5 or 0 to undo previous moves.
   Make sure "Num lock" is on!
-</p>
+</pre>
 <button id="game1" onclick="init1()">Main game</button>
 <button id="game2" onclick="init2()">Bonus game</button>
 <div>
