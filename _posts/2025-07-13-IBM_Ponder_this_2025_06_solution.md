@@ -2,8 +2,6 @@
 title: IBM Ponder this 2025 06 solution
 date: 2025-07-13
 ---
-<html>
-<head>
 <style>
 .keypad{
   border: 1px solid black;
@@ -66,8 +64,6 @@ date: 2025-07-13
   color: rgb(220, 30, 30);;
 }
 </style>
-</head>
-<body>
 <p>
 Problem description can be found <a href="https://research.ibm.com/haifa/ponderthis/solutions/June2025.html">here</a>.
 You can play the games below with a standard keyboard.
@@ -626,7 +622,6 @@ Test path
     I've been quite busy lately, so I'll stop solving the PonderThis puzzles for a while. Don't know when I'll resume, anyway, good luck to the other challengers! Cheers!
   </p>
 </div>
-</body>
 <script type="text/javascript">
 /*Written by Yi Jiang, Aug 2021. All rights reserved.*/
 var sidelength=20;//10;
@@ -785,4 +780,3 @@ function keyNav(){
     document.onkeyup=function(a){holdingOverrideKey=false;};
 }
 </script>
-</html>
