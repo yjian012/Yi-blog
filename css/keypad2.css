@@ -1,0 +1,60 @@
+.keypad{
+  border: 1px solid black;
+  position: relative;
+}
+.key {
+  border: 1px solid #3333FF;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.keyOff{
+  background-color: #FFFFFF; /* Green */
+}
+.keyOn{
+  background-color: #04AA6D; /* Green */
+}
+.keyEmpty{
+  background-color: #FFFFFF; /* White */
+}
+.keyVis{
+  background-color: #0000FF; /* Blue */
+}
+.keyForb{
+  background-color: #FF0000; /* Red */
+}
+.keyPlayer{
+  background-color: #00FF00; /*Green*/
+}
+#overlay,#overlay_f {
+  position: absolute;
+  display: none;
+  height: 240px;
+  width: 240px;
+  background: rgba(238, 228, 218, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#winText{
+  position: relative;
+  top: 70px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(180, 120, 120);;
+}
+#failText{
+  position: relative;
+  top: 70px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 60px;
+  color: rgb(220, 30, 30);;
+}
