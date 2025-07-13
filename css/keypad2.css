@@ -1,3 +1,6 @@
+.td{
+   white-space:nowrap;
+}
 .keypad{
   border: 1px solid black;
   position: relative;
