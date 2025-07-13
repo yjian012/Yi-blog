@@ -1,5 +1,6 @@
-.td{
+td{
    white-space:nowrap;
+   padding:0px;
 }
 .keypad{
   border: 1px solid black;
